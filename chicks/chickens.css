@@ -1,0 +1,142 @@
+.chicken-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.head {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: #ffba00;
+}
+
+.eye {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.eye:nth-child(2) {
+    left: 65%;
+}
+
+.beak {
+    position: absolute;
+    bottom: 20%;
+    left: 45%;
+    width: 10%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: #ff8000;
+}
+
+.body {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 60%;
+    height: 50%;
+    border-radius: 100px/50px;
+    background-color: #ffba00;
+}
+
+.wing {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: #f0e68c;
+}
+
+.body-feathers {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 60%;
+    height: 30%;
+    border-radius: 0 0 20px 20px;
+    background-color: #f0e68c;
+}
+
+.tail-feathers {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 30%;
+    border-left: 20px solid #f0e68c;
+    border-right: 20px solid #f0e68c;
+    border-bottom: 30px solid transparent;
+}
+
+.leg {
+    position: absolute;
+    width: 5px;
+    height: 30%;
+    background-color: #ffba00;
+    border-radius: 50%;
+}
+
+.leg.left {
+    bottom: 0;
+    left: 30%;
+}
+
+.leg.right {
+    bottom: 0;
+    left: 60%;
+}
+
+
+nav {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: chocolate;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .slider-image {
+    width: 50%;
+    object-fit: cover;
+    margin-right: 50px;
+  }
