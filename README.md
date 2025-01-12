@@ -1,6 +1,6 @@
-NOTE: NOT ALL OF MY PROJECTS INVOLVING INCLUDED LANGUAGES ARE ON THIS REPOSITORY
+NOTE: NOT ALL OF MY PROJECTS INVOLVING  INCLUDED LANGUAGES ARE ON THIS REPOSITORY
 
-Contact me on:
+My contacts are:
 Phone : +254794797796
 Email : peterwahomemaina003@gmail.com
 Whatsapp : +254794797796
@@ -11,8 +11,8 @@ Custom animations and transitions using CSS.
 Semantic HTML structure.
 All Browser compatibility
 
-for developers, designers, businesses... 
+for developers, designers, businesses... etc.
 
-Goal is to showcase web design skills, improve front-end development
+Goal is to showcase web design skills, improve front-end development.
 
-NOTE: NOT ALL F MY PROJECTS INVOLVING INCLUDED LANGUAGES ARE ON THIS REPOSITORY
+NOTE: NOT ALL OF MY PROJECTS INVOLVING INCLUDED LANGUAGES ARE ON THIS REPOSITORY
