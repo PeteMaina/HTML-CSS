@@ -15,4 +15,6 @@ for developers, designers, businesses... etc.
 
 Goal is to showcase web design skills, improve front-end development.
 
+It's always a step by step process  
+
 NOTE: NOT ALL OF MY PROJECTS INVOLVING INCLUDED LANGUAGES ARE ON THIS REPOSITORY
