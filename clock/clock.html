@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <link rel="shortcut icon" href="Profile_Pete.png" type="image/x-icon">
+
+
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        #clock {
+            font-size: 6rem;
+            font-weight: 1000;
+            padding: 25px, 30px;
+            border-radius: 10px;
+            border: 5px solid #6F8FAF;
+            color: aqua;
+        }
+
+        #day, #date, #greetings {
+            font-size: 3rem;
+            padding: 25px, 30px;
+            bottom: none;
+            color: aqua;
+            
+        }
+
+        #day{
+            font-weight: 900;
+        }
+        #date {
+            font-weight: 600; 
+        }
+
+        #greetings {
+            position: fixed;
+            top: 0;
+        }
+
+        #name {
+            margin-top: 10px; 
+            font-size: normal;
+            font-weight: 600;
+            color: aqua;
+            
+        }
+
+        div{
+            margin-top: 10px;
+        }
+
+        footer {
+            font-weight: 600;
+            font-size: large;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: 0;
+            color: #ADD8E6;
+            
+        }
+    </style>
+
+     <div id="greetings"> From Pete</div>
+     <div id="name">From Pete</div>
+
+</head>
+<body>
+    
+    <div id="clock"></div> 
+    <div id="day"></div><br> 
+    <div id="date"></div> <br>
+
+<script>
+    function clock(){
+        var today = new Date();
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var seconds = today.getSeconds();
+        var day = today.getDate(); 
+        var month = today.getMonth() + 1; 
+        var year = today.getFullYear();
+        var dayOfWeek = today.getDay(); 
+        var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        const hour = today.getHours();
+            let greeting;
+
+            if (hour >= 5 && hour < 12) {
+                greeting = "Good Morning";
+            } else if (hour >= 12 && hour < 18) {
+                greeting = "Good Afternoon";
+            } else {
+                greeting = "Good Evening";
+            }
+
+            document.getElementById("greetings").textContent = greeting;
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        day = day < 10 ? "0" + day : day; 
+        month = month < 10 ? "0" + month : month;
+
+        var time = hours + " : " + minutes + " : " + seconds + "<br>";
+        var dateString = month + "/" + day + "/" + year;
+        var dayOfWeekString = "It's " + daysOfWeek[dayOfWeek];
+
+        document.getElementById("clock").innerHTML = time;
+        document.getElementById("day").innerHTML = dayOfWeekString;
+        document.getElementById("date").innerHTML = dateString;
+
+        setTimeout(clock, 1000);
+    }
+
+    clock();
+
+</script>
+
+    
+
+</body>
+
+<footer>
+    &#169 2025 Peter Maina <br>
+    <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp contact" width="35" height="35" style="margin-right: 25px;"></a>
+    <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github contact" width="35" height="35" style="margin-right: 25px;"></a>
+    <a href="mailto:peterwahomemaina003#gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="35" height="35"></a>
+</footer>
+
+</html>
