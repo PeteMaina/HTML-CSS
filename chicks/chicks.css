@@ -47,6 +47,7 @@
     height: 50%;
     border-radius: 100px/50px;
     background-color: #ffffb3;
+    overflow-x: hidden;
 }
 
 .wing {

@@ -140,3 +140,12 @@ footer {
     object-fit: cover;
     margin-right: 50px;
   }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  li.active a {
+    color: #007bff; /* Blue color for active link */
+    font-weight: bold;
+  }
