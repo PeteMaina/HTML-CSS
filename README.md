@@ -11,6 +11,8 @@ Custom animations and transitions using CSS.
 Semantic HTML structure.
 All Browser compatibility
 
+They include a website for selling chickens, a digital calculator...etc
+
 for developers, designers, businesses... etc.
 
 Goal is to showcase web design skills, improve front-end development.
