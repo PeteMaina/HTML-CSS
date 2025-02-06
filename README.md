@@ -11,7 +11,7 @@ Custom animations and transitions using CSS.
 Semantic HTML structure.
 All Browser compatibility
 
-They include a website for selling chickens, a digital calculator...etc
+They include a website for selling chickens, a digital calculator, restaurant website, password generator...etc
 
 for developers, designers, businesses... etc.
 
