@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitLife Gym</title>
+  <style>
+    /* Define a consistent five-shade color palette */
+    :root {
+      --color1: #2C3E50; /* Deep Navy (primary dark) */
+      --color2: #34495E; /* Slate (secondary dark) */
+      --color3: #16A085; /* Teal (accent) */
+      --color4: #ECF0F1; /* Light Gray (background/light) */
+      --color5: #E74C3C; /* Bold Red (call-to-action) */
+    }
+
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--color4);
+      color: var(--color1);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--color1);
+      color: var(--color4);
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Navigation */
+    nav {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: var(--color1);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--color3);
+      color: var(--color4);
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: var(--color2);
+      color: var(--color4);
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background-color: var(--color5);
+      border: none;
+      color: var(--color4);
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero button:hover {
+      background-color: #c0392b; /* Slightly darker red */
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .feature {
+      background-color: var(--color4);
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 300px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature h3 {
+      color: var(--color1);
+      margin-bottom: 10px;
+    }
+
+    /* About Section */
+    .about {
+      margin-bottom: 40px;
+    }
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .about-container img {
+      flex: 1 1 40%;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .about-text {
+      flex: 1 1 50%;
+    }
+    .about-text h2 {
+      margin-bottom: 15px;
+    }
+    .about-text p {
+      margin-bottom: 10px;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .gallery h2 {
+      margin-bottom: 20px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .testimonials h2 {
+      margin-bottom: 20px;
+    }
+    .testimonials-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .testimonial {
+      background-color: var(--color4);
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 300px;
+      max-width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    .testimonial h3 {
+      margin-bottom: 10px;
+      color: var(--color1);
+    }
+
+    /* Pricing Section */
+    .pricing {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .pricing h2 {
+      margin-bottom: 20px;
+    }
+    .pricing-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .pricing-card {
+      background-color: var(--color4);
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 300px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .pricing-card h3 {
+      margin-bottom: 10px;
+      color: var(--color1);
+    }
+    .pricing-card .price {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--color3);
+    }
+    .pricing-card ul {
+      list-style: none;
+      margin-bottom: 15px;
+    }
+    .pricing-card li {
+      margin: 5px 0;
+    }
+    .pricing-card button {
+      background-color: var(--color5);
+      border: none;
+      color: var(--color4);
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .pricing-card button:hover {
+      background-color: #c0392b;
+    }
+
+    /* Contact Section */
+    .contact {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .contact h2 {
+      margin-bottom: 20px;
+    }
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact form {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact form input,
+    .contact form textarea {
+      padding: 10px;
+      border: 1px solid var(--color2);
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact form button {
+      background-color: var(--color5);
+      border: none;
+      color: var(--color4);
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact form button:hover {
+      background-color: #c0392b;
+    }
+    .contact-info {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .contact-info img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: var(--color1);
+      color: var(--color4);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .about-container,
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>FitLife Gym</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <h1>Transform Your Body, Transform Your Life</h1>
+      <p>
+        Join FitLife Gym today and start your journey to a healthier, stronger you!
+      </p>
+      <button id="joinBtn">Join Now</button>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="feature">
+        <h3>Modern Equipment</h3>
+        <p>
+          Enjoy state-of-the-art gym equipment designed to help you maximize your workouts.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Expert Trainers</h3>
+        <p>
+          Our certified trainers are here to guide you every step of your fitness journey.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Flexible Classes</h3>
+        <p>
+          Whether you're into HIIT, yoga, or strength training, we have a class for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <img src="https://via.placeholder.com/500x300?text=Gym+Facility" alt="Gym Facility">
+        <div class="about-text">
+          <h2>About FitLife Gym</h2>
+          <p>
+            At FitLife Gym, our mission is to inspire and empower our members to live healthier lives.
+          </p>
+          <p>
+            With modern equipment, diverse classes, and expert guidance, we are dedicated to helping you reach your fitness goals.
+          </p>
+          <p>
+            Our state-of-the-art facility offers a welcoming environment where both beginners and fitness enthusiasts can thrive.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+      <h2>Our Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/300?text=Gym+1" alt="Gym Image 1">
+        <img src="https://via.placeholder.com/300?text=Gym+2" alt="Gym Image 2">
+        <img src="https://via.placeholder.com/300?text=Gym+3" alt="Gym Image 3">
+        <img src="https://via.placeholder.com/300?text=Gym+4" alt="Gym Image 4">
+        <img src="https://via.placeholder.com/300?text=Gym+5" alt="Gym Image 5">
+        <img src="https://via.placeholder.com/300?text=Gym+6" alt="Gym Image 6">
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <h2>What Our Members Say</h2>
+      <div class="testimonials-container">
+        <div class="testimonial">
+          <img src="https://via.placeholder.com/100?text=Avatar" alt="Member 1">
+          <h3>John Doe</h3>
+          <p>"FitLife Gym changed my life. The trainers and facilities are top-notch!"</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://via.placeholder.com/100?text=Avatar" alt="Member 2">
+          <h3>Jane Smith</h3>
+          <p>"I love the variety of classes available. There's something for everyone!"</p>
+        </div>
+        <div class="testimonial">
+          <img src="" alt="Member 3">
+          <h3>Mike Johnson</h3>
+          <p>"The community at FitLife Gym is amazing. I've met so many supportive people."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+      <h2>Membership Plans</h2>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3>Basic Plan</h3>
+          <p class="price">$19.99/month</p>
+          <ul>
+            <li>Access to gym equipment</li>
+            <li>Free fitness consultation</li>
+            <li>1 class per week</li>
+          </ul>
+          <button class="join-now">Join Now</button>
+        </div>
+        <div class="pricing-card">
+          <h3>Premium Plan</h3>
+          <p class="price">$39.99/month</p>
+          <ul>
+            <li>Unlimited gym access</li>
+            <li>Access to all classes</li>
+            <li>Personal training sessions</li>
+          </ul>
+          <button class="join-now">Join Now</button>
+        </div>
+        <div class="pricing-card">
+          <h3>VIP Plan</h3>
+          <p class="price">$59.99/month</p>
+          <ul>
+            <li>All Premium benefits</li>
+            <li>Nutrition planning</li>
+            <li>Exclusive workshops</li>
+          </ul>
+          <button class="join-now">Join Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-container">
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <img src="https://via.placeholder.com/400x300?text=Map+Placeholder" alt="Map Placeholder">
+          <p>Visit us at 123 Ruiru street,<br>Ruiru, Kenya</p>
+          <p>Email: peterwahomemaina003@gmail.com</p>
+          <p>Phone: +254794797796</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 FitLife Gym. All rights reserved. <br>Designed by PeterMaina</p>
+    </footer>
+  </div>
+
+  <script>
+    // JavaScript for interactive functionality
+
+    // Join Now button in the Hero section
+    document.getElementById('joinBtn').addEventListener('click', function () {
+      alert('Thank you for your interest! Please contact us at info@fitlifegym.com to join.');
+    });
+
+    // Add event listeners to all "Join Now" buttons in the pricing section
+    document.querySelectorAll('.join-now').forEach(function(button) {
+      button.addEventListener('click', function() {
+        alert('Thank you for choosing a membership plan! Please contact us at info@fitlifegym.com to get started.');
+      });
+    });
+
+    // Basic contact form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
