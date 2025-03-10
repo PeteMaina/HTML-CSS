@@ -15,7 +15,8 @@ They include websites for :
 selling chickens,    ->   https://petemaina.github.io/HTML-CSS/chicks/homepage.html
 digital calculator, 
 restaurant website,  ->   https://petemaina.github.io/HTML-CSS/Restautant/home.html  ,
- GYM                 ->   https://petemaina.github.io/HTML-CSS/GYM/fitlife.html
+ GYM                 ->   https://petemaina.github.io/HTML-CSS/GYM/fitlife.html  ,  
+ Task App            ->   https://petemaina.github.io/HTML-CSS/Task%20App/index.html
 password generator...etc
 
 for developers, designers, businesses... etc.
