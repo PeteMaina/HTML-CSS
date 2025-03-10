@@ -14,7 +14,8 @@ All Browser compatibility
 They include websites for :
 selling chickens,    ->   https://petemaina.github.io/HTML-CSS/chicks/homepage.html
 digital calculator, 
-restaurant website,  ->   https://petemaina.github.io/HTML-CSS/Restautant/home.html
+restaurant website,  ->   https://petemaina.github.io/HTML-CSS/Restautant/home.html  ,
+ GYM                 ->   https://petemaina.github.io/HTML-CSS/GYM/fitlife.html
 password generator...etc
 
 for developers, designers, businesses... etc.
