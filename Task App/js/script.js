@@ -1,60 +1,78 @@
-//Getting all required elements
+// Getting all required elements
 const inputField = document.querySelector(".input-field textarea"),
   todoLists = document.querySelector(".todoLists"),
   pendingNum = document.querySelector(".pending-num"),
   clearButton = document.querySelector(".clear-button");
 
-//we will call this function while adding, deleting and checking-unchecking the task
+// Load tasks from local storage on page load
+document.addEventListener("DOMContentLoaded", loadTasks);
+
+function loadTasks() {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  tasks.forEach((task) => {
+    addTaskToDOM(task.text, task.completed);
+  });
+  allTasks();
+}
+
+function saveTasks() {
+  const tasks = [];
+  document.querySelectorAll(".todoLists .list").forEach((taskEl) => {
+    tasks.push({
+      text: taskEl.querySelector(".task").textContent,
+      completed: taskEl.classList.contains("completed"),
+    });
+  });
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
 function allTasks() {
   let tasks = document.querySelectorAll(".pending");
-
-  //if tasks' length is 0 then pending num text content will be no, if not then pending num value will be task's length
   pendingNum.textContent = tasks.length === 0 ? "no" : tasks.length;
 
   let allLists = document.querySelectorAll(".list");
-  if (allLists.length > 0) {
-    todoLists.style.marginTop = "20px";
-    clearButton.style.pointerEvents = "auto";
-    return;
-  }
-  todoLists.style.marginTop = "0px";
-  clearButton.style.pointerEvents = "none";
+  todoLists.style.marginTop = allLists.length > 0 ? "20px" : "0px";
+  clearButton.style.pointerEvents = allLists.length > 0 ? "auto" : "none";
 }
 
-//add task while we put value in text area and press enter
+// Add task when Enter is pressed
 inputField.addEventListener("keyup", (e) => {
-  let inputVal = inputField.value.trim(); //trim fuction removes space of front and back of the inputed value
-
-  //if enter button is clicked and inputed value length is greated than 0.
+  let inputVal = inputField.value.trim();
   if (e.key === "Enter" && inputVal.length > 0) {
-    let liTag = ` <li class="list pending" onclick="handleStatus(this)">
-          <input type="checkbox" />
-          <span class="task">${inputVal}</span>
-          <i class="uil uil-trash" onclick="deleteTask(this)"></i>
-        </li>`;
-
-    todoLists.insertAdjacentHTML("beforeend", liTag); //inserting li tag inside the todolist div
-    inputField.value = ""; //removing value from input field
+    addTaskToDOM(inputVal);
+    inputField.value = "";
+    saveTasks();
     allTasks();
   }
 });
 
-//checking and unchecking the chekbox while we click on the task
-function handleStatus(e) {
-  const checkbox = e.querySelector("input"); //getting checkbox
-  checkbox.checked = checkbox.checked ? false : true;
-  e.classList.toggle("pending");
+function addTaskToDOM(text, completed = false) {
+  let liTag = document.createElement("li");
+  liTag.className = `list ${completed ? "completed" : "pending"}`;
+  liTag.innerHTML = `
+    <input type="checkbox" ${completed ? "checked" : ""} />
+    <span class="task">${text}</span>
+    <i class="uil uil-trash" onclick="deleteTask(this)"></i>
+  `;
+  liTag.querySelector("input").addEventListener("change", () => handleStatus(liTag));
+  todoLists.appendChild(liTag);
+}
+
+function handleStatus(taskEl) {
+  taskEl.classList.toggle("completed");
+  taskEl.classList.toggle("pending");
+  saveTasks();
   allTasks();
 }
 
-//deleting task while we click on the delete icon.
 function deleteTask(e) {
-  e.parentElement.remove(); //getting parent element and remove it
+  e.parentElement.remove();
+  saveTasks();
   allTasks();
 }
 
-//deleting all the tasks while we click on the clear button.
 clearButton.addEventListener("click", () => {
   todoLists.innerHTML = "";
+  localStorage.removeItem("tasks");
   allTasks();
 });
