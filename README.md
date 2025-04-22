@@ -1,7 +1,8 @@
 NOTE: NOT ALL OF MY PROJECTS INVOLVING  INCLUDED LANGUAGES ARE ON THIS REPOSITORY
 
 My contacts are:
-Phone : +254794797796
+
+
 Email : peterwahomemaina003@gmail.com
 Whatsapp : +254794797796
 
