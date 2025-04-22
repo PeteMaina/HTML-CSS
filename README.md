@@ -4,7 +4,7 @@ My contacts are:
 
 
 Email : peterwahomemaina003@gmail.com
-Whatsapp : +254794797796
+
 
 Random HTML, CSS and Javascript codes
 Responsive design for mobile, tablet, and desktop.
