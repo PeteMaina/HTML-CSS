@@ -14,7 +14,7 @@ All Browser compatibility
 
 They include websites for :
 
-selling chickens,    ->   https://petemaina.github.io/HTML-CSS/chicks/homepage.html
+chicks/chickens,    ->   https://petemaina.github.io/HTML-CSS/chicks/homepage.html
 
 digital calculator, 
 
