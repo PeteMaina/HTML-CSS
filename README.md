@@ -1,6 +1,6 @@
 NOTE: NOT ALL OF MY PROJECTS INVOLVING  INCLUDED LANGUAGES ARE ON THIS REPOSITORY
 
-My contacts are:
+Reach me:
 
 
 Email : peterwahomemaina003@gmail.com
