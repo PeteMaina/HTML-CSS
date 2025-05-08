@@ -1,9 +1,10 @@
 NOTE: NOT ALL OF MY PROJECTS INVOLVING  INCLUDED LANGUAGES ARE ON THIS REPOSITORY
 
-My contacts are:
-Phone : +254794797796
+Reach me:
+
+
 Email : peterwahomemaina003@gmail.com
-Whatsapp : +254794797796
+
 
 Random HTML, CSS and Javascript codes
 Responsive design for mobile, tablet, and desktop.
@@ -12,10 +13,17 @@ Semantic HTML structure.
 All Browser compatibility
 
 They include websites for :
-selling chickens,    ->   https://petemaina.github.io/HTML-CSS/chicks/homepage.html
+
+chicks/chickens,    ->   https://petemaina.github.io/HTML-CSS/chicks/homepage.html
+
 digital calculator, 
+
 restaurant website,  ->   https://petemaina.github.io/HTML-CSS/Restautant/home.html  ,
- GYM                 ->   https://petemaina.github.io/HTML-CSS/GYM/fitlife.html
+
+ GYM                 ->   https://petemaina.github.io/HTML-CSS/GYM/fitlife.html  ,  
+ 
+ Task App            ->   https://petemaina.github.io/HTML-CSS/Task%20App/index.html
+ 
 password generator...etc
 
 for developers, designers, businesses... etc.
