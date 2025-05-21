@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuristic AI Chatbot</title>
+    <title>Pete AI</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #6e8efb, #a777e3);
@@ -497,7 +498,7 @@
         <div class="sidebar">
             <div class="logo">
                 <div class="logo-icon">AI</div>
-                <div class="logo-text">NexusChat</div>
+                <div class="logo-text">Pete AI</div>
             </div>
             <div class="chat-list" id="chatList">
                 <!-- Chat history will be loaded here -->
@@ -523,12 +524,14 @@
                         <option value="llama3">Llama 3</option>
                         <option value="mistral">Mistral</option>
                         <option value="custom">Custom</option>
+                        <option value="custom">Image undresser</option>
+                        <option value="custom">Dark web navigator</option>
                     </select>
                 </div>
             </div>
             <div class="chat-messages" id="chatMessages">
                 <div class="message ai-message">
-                    <div class="message-content">Hello! I'm your AI assistant. How can I help you today?</div>
+                    <div class="message-content">Hello <br>crafted by Peter I'm your AI assistant. <br><br> How can I help you today?</div>
                     <div class="message-time">Just now</div>
                 </div>
             </div>
@@ -1010,3 +1013,26 @@
                 }
                 return `${size.toFixed(2)} ${units[index]}`;
             }
+            formatDate(date) {
+                const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+                return new Date(date).toLocaleDateString(undefined, options);
+            }
+            scrollToBottom() {
+                this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+            }
+            showError(message) {
+                const errorEl = document.createElement('div');
+                errorEl.className = 'error-message';
+                errorEl.textContent = message;
+                this.chatMessages.appendChild(errorEl);
+                this.scrollToBottom();
+                
+                setTimeout(() => {
+                    errorEl.remove();
+                }, 3000);
+            }
+        }
+        // Initialize the chat app
+        document.addEventListener('DOMContentLoaded', () => {
+            new ChatApp();
+        });
