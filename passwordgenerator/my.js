@@ -68,11 +68,15 @@ function displayErrorLengthMessage() {
   message.textContent =
     "Password will cause problems if more than 20 characters long";
 }
-
+   
 function coppyMessage() {
-  message.classList.add("visibility");
   message.classList.add("message");
-  message.textContent = "Password copied";
+  message.classList.remove("visibility");
+  message.textContent = "Password copied to clipboard";
+  setTimeout(() => {
+    message.classList.add("visibility");
+    message.classList.remove("message");
+  }, 2000);
 }
 
 function copyToClipboard() {
@@ -100,3 +104,5 @@ const generateString = (howLong) =>
   Array(howLong)
     .fill("")
     .map((v) => Math.random().toString(36).charAt(2));
+// Generate a random string of specified length 
+

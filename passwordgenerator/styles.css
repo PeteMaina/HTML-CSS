@@ -281,14 +281,14 @@ input[type="range"]::-ms-track {
 footer {
   font-weight: 600;
   font-size: large;
-  display: block;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: static;
   bottom: 0;
   color: #ADD8E6;
-  
+  margin: 0 auto;
 }
 
 
