@@ -11,57 +11,178 @@
 
 <body>
     <header>
-        <h1>Feathery Friends Farm</h1>
-        <p>Fresh Eggs, Happy Hens, Healthy Chicks</p>
+        <div class="logo">FFFARM.</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="egg.html" class="active">Eggs</a></li>
+                <li><a href="chickens.html">Chickens</a></li>
+                <li><a href="chicks.html">Chicks</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="egg.html">Eggs</a></li>
-            <li><a href="chickens.html">Chickens</a></li>
-            <li><a href="chicks.html">Chicks</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section>
-            <div class="visual-container">
-                <div class="egg-container">
-                    <div class="egg-white"></div>
-                    <div class="egg-yolk"></div>
+        <!-- Eggs Hero -->
+        <section class="reveal">
+            <span class="tagline">Our Gold</span>
+            <h1 class="hero-title">The <span class="accent-text">Golden</span> Standard.</h1>
+            <p class="hero-subtitle">Meticulously gathered, nutrient-rich, and farm-fresh. Every egg is a masterpiece of
+                nature, delivered straight from our pastures to your kitchen.</p>
+        </section>
+
+        <div class="bento-grid">
+            <!-- Visual Card -->
+            <div class="bento-item row-2 reveal">
+                <div class="visual-container">
+                    <div class="egg-container">
+                        <div class="egg-white"></div>
+                        <div class="egg-yolk"></div>
+                    </div>
                 </div>
             </div>
 
-            <h2>Imagine This</h2>
-            <p>Cracking open an egg with a shell so smooth and rich in color, it gleams like a sunrise. Inside, a
-                vibrant yolk, bursting with sunshine and flavor, awaits. These aren't just eggs; they're edible works of
-                art, ready to transform your culinary creations.</p>
-
-            <div class="slider-container">
-                <img src="egg-7345934_640.jpg" alt="eggs" class="slider-image">
-                <img src="EggsCarton.webp" alt="eggs" class="slider-image">
-                <img src="Eggs4.jpg" alt="eggs" class="slider-image">
+            <!-- Quality Card -->
+            <div class="bento-item col-2 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Quality Control</span>
+                    <h2>Fresh from Farm to You</h2>
+                    <p style="color: var(--text-dim); margin-top: 1rem;">Our eggs are collected twice daily to ensure
+                        maximum freshness. Unlike commercial eggs that can sit in cold storage for weeks, FFFARM eggs
+                        are usually in your hands within 48 hours of being laid.</p>
+                    <p style="color: var(--text-dim); margin-top: 1rem;">This rapid logistics chain preserves the
+                        delicate proteins and vitamins that make our eggs a nutritional powerhouse.</p>
+                </div>
             </div>
 
-            <h2>Fresh from Farm to You</h2>
-            <p>Our eggs come straight from happy hens raised on open pastures, where they roam freely and indulge in a
-                wholesome, natural diet. This translates to eggs brimming with freshness, with yolks so vibrantly
-                colored they'll add a touch of luxury to every dish.</p>
+            <!-- Product Image -->
+            <div class="bento-item col-1 reveal">
+                <img src="organic_eggs_lifestyle.jpg" alt="FFFarm organic assorted eggs" class="card-image">
+                <div class="card-content">
+                    <span class="card-tag">Organic</span>
+                </div>
+            </div>
+
+            <!-- Nutrition Card -->
+            <div class="bento-item col-2 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Scientific Profile</span>
+                    <h3>Nutritional Density</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+                        <div>
+                            <p style="font-size: 0.8rem; color: var(--accent-orange);">Protein</p>
+                            <p style="font-size: 1.2rem; font-weight: 600;">6.3g</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.8rem; color: var(--accent-orange);">Omega-3</p>
+                            <p style="font-size: 1.2rem; font-weight: 600;">High</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.8rem; color: var(--accent-orange);">Vitamin D</p>
+                            <p style="font-size: 1.2rem; font-weight: 600;">20% DV</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.8rem; color: var(--accent-orange);">Choline</p>
+                            <p style="font-size: 1.2rem; font-weight: 600;">147mg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Packaging Image -->
+            <div class="bento-item col-1 reveal">
+                <img src="EggsCarton.webp" alt="Eco-friendly egg carton" class="card-image">
+                <div class="card-content">
+                    <span class="card-tag">Sustainability</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Culinary Section -->
+        <section style="margin-top: 10rem;" class="reveal">
+            <div class="section-intro">
+                <span class="tagline">Kitchen Tips</span>
+                <h2 style="font-size: 3rem;">Culinary Versatility</h2>
+                <p style="color: var(--text-dim);">A FFFARM egg isn't just an ingredient; it's the foundation of gourmet
+                    cooking. From the perfect poach to a velvety custard, the quality of the yolk makes all the
+                    difference.</p>
+            </div>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <h5>The Perfect Poach</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-top: 1rem;">Use the freshest eggs
+                        possible. The structural integrity of our pasture-raised whites ensures a tight, clean poach
+                        without the mess.</p>
+                </div>
+                <div class="feature-card">
+                    <h5>Golden Omelettes</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-top: 1rem;">Our deep orange yolks, high
+                        in lutein, give your omelettes a rich color and buttery flavor that commercial eggs simply
+                        cannot match.</p>
+                </div>
+                <div class="feature-card">
+                    <h5>Baking Mastery</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-top: 1rem;">The high protein tension in
+                        FFFARM eggs provides better lift for sponges and more stability for mousses and meringues.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grading Section -->
+        <section
+            style="margin-top: 10rem; background: var(--card-bg); padding: 6rem; border-radius: 40px; border: 1px solid var(--glass-border);"
+            class="reveal">
+            <h2 style="margin-bottom: 2rem;">The FFFARM Grading System</h2>
+            <p style="color: var(--text-dim); max-width: 600px; margin-bottom: 3rem;">We go beyond standard USDA
+                grading. Every egg is hand-inspected for shell density, yolk centering, and air-cell size to ensure you
+                only get the absolute best.</p>
+            <div style="display: flex; gap: 3rem;">
+                <div>
+                    <h5 style="color: var(--accent-orange);">Grade AAA</h5>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">Vibrant yolk, thickest whites, and flawless
+                        shell texture.</p>
+                </div>
+                <div>
+                    <h5 style="color: var(--accent-orange);">Pasture-Select</h5>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">Extra large sizing with the most diverse
+                        nutritional profile.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Feathery Friends Farm | Peter Maina</p>
-        <div class="social-links">
-            <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp" width="40"
-                    height="40"></a>
-            <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github" width="40"
-                    height="40"></a>
-            <a href="mailto:peterwahomemaina003@gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="40"
-                    height="40"></a>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">FFFARM.</div>
+                <p style="color: var(--text-dim);">Leading the way in ethical farming practices. Designed for the
+                    community, by the community.</p>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Explore</h5>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="egg.html" style="color: var(--text-dim); text-decoration: none;">Eggs</a></li>
+                    <li><a href="chickens.html" style="color: var(--text-dim); text-decoration: none;">Chickens</a></li>
+                    <li><a href="chicks.html" style="color: var(--text-dim); text-decoration: none;">Chicks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Connect</h5>
+                <div class="social-links">
+                    <a href="https://wa.me/254794797796" target="_blank" class="social-icon"><img src="whatsapp.png"
+                            alt="wa"></a>
+                    <a href="http://github.com/peteMaina" target="_blank" class="social-icon"><img src="github.png"
+                            alt="gh"></a>
+                    <a href="mailto:peterwahomemaina003@gmail.com" target="_blank" class="social-icon"><img
+                            src="gmail.png" alt="gm"></a>
+                </div>
+            </div>
         </div>
+        <p
+            style="text-align: center; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+            &copy; <span id="year"></span> Feathery Friends Farm | Peter Maina
+        </p>
     </footer>
 
     <script src="main.js"></script>

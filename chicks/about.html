@@ -4,57 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feathery Friends Farm | About Us</title>
+    <title>Feathery Friends Farm | Our Story</title>
     <link rel="stylesheet" href="global.css">
 </head>
 
 <body>
     <header>
-        <h1>Feathery Friends Farm</h1>
-        <p>Fresh Eggs, Happy Hens, Healthy Chicks</p>
+        <div class="logo">FFFARM.</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="egg.html">Eggs</a></li>
+                <li><a href="chickens.html">Chickens</a></li>
+                <li><a href="chicks.html">Chicks</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="egg.html">Eggs</a></li>
-            <li><a href="chickens.html">Chickens</a></li>
-            <li><a href="chicks.html">Chicks</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section class="about-us">
-            <h2>Our Story</h2>
-            <p>Feathery Friends Farm is a family-owned and operated farm dedicated to providing our community with
-                fresh, high-quality eggs and happy, healthy chickens. We started our journey 3 years ago with a small
-                flock of hens and a passion for sustainable agriculture.</p>
+        <!-- About Hero -->
+        <section class="reveal">
+            <span class="tagline">Our Legacy</span>
+            <h1 class="hero-title">Beyond <br><span class="accent-text">Poultry.</span></h1>
+            <p class="hero-subtitle">What started as a modest family endeavor in 2021 has evolved into a benchmark for
+                ethical and sustainable farming in the region.</p>
+        </section>
 
-            <div class="video-container">
-                <img src="poultry.jpeg" alt="Farm picture" style="width: 100%; border-radius: 15px;">
+        <div class="bento-grid">
+            <!-- Story Card -->
+            <div class="bento-item col-2 row-2 reveal">
+                <div class="card-content">
+                    <span class="card-tag">The Narrative</span>
+                    <h2>A Family Legacy</h2>
+                    <p style="color: var(--text-dim); margin-top: 1.5rem;">Founded by Peter Maina with a vision to bring
+                        farm-fresh quality to every urban doorstep, FFFARM began with just 50 hens and a commitment to
+                        zero-chemical feed. Today, we manage a thriving ecosystem of heritage breeds and organic
+                        pastures.</p>
+                    <p style="color: var(--text-dim); margin-top: 1rem;">Our journey wasn't just about scaling numbers;
+                        it was about scaling trust. We've spent five years perfecting our "Hatch-to-Home" logistics
+                        chain to ensure that your products arrive with their nutritional profile fully intact.</p>
+                </div>
             </div>
 
-            <p>We believe that happy hens lay the best eggs. That's why we raise our chickens in a humane and
-                stress-free environment, allowing them to roam freely in our spacious pastures. We feed them a
-                nutritious diet of grains, vegetables, and fresh herbs, ensuring they get all the essential vitamins and
-                minerals they need to produce delicious and healthy eggs.</p>
-            <p>To buy or take a tour on our farm, you can reach us via the social links below. We also provide delivery
-                services at a competitive fee.</p>
+            <!-- Visionary Card -->
+            <div class="bento-item col-2 reveal">
+                <img src="farm_visit_engagement.jpg" alt="Peter Maina at the farm" class="card-image">
+                <div class="card-content">
+                    <span class="card-tag">The Visionary</span>
+                    <h3>Peter Maina</h3>
+                    <p style="font-size: 0.8rem; color: var(--accent-orange);">Founder & Chief Husbandry Officer</p>
+                </div>
+            </div>
+
+            <!-- Operational Excellence -->
+            <div class="bento-item col-2 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Standards</span>
+                    <h3>Bio-Security & Ethics</h3>
+                    <p style="color: var(--text-dim); margin-top: 1rem;">We maintain a Tier-1 biosecurity rating,
+                        ensuring our flocks are protected from external pathogens without the use of aggressive
+                        antibiotics. Our birds enjoy a natural lifestyle that aligns with their biological needs.</p>
+                </div>
+            </div>
+
+            <!-- Impact Card -->
+            <div class="bento-item col-1 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Community</span>
+                    <h3>500+</h3>
+                    <p style="color: var(--text-dim);">Local Families Served Monthly</p>
+                </div>
+            </div>
+
+            <div class="bento-item col-1 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Education</span>
+                    <h3>12</h3>
+                    <p style="color: var(--text-dim);">Annual Farm Workshops</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vision Section -->
+        <section style="margin-top: 10rem;" class="reveal">
+            <div class="grid-3">
+                <div class="feature-card reveal-left">
+                    <span class="tagline">Mission</span>
+                    <h4 style="margin-bottom: 1rem;">Ethical Nourishment</h4>
+                    <p style="color: var(--text-dim);">To provide the highest density of nutrition through transparency
+                        and bird-centric husbandry practices.</p>
+                </div>
+                <div class="feature-card reveal-left" style="transition-delay: 0.1s;">
+                    <span class="tagline">Vision</span>
+                    <h4 style="margin-bottom: 1rem;">Sustainable Standard</h4>
+                    <p style="color: var(--text-dim);">To become the regional blueprint for carbon-neutral, small-scale
+                        industrial farming by 2030.</p>
+                </div>
+                <div class="feature-card reveal-left" style="transition-delay: 0.2s;">
+                    <span class="tagline">Values</span>
+                    <h4 style="margin-bottom: 1rem;">Radical Honesty</h4>
+                    <p style="color: var(--text-dim);">Open gates, open books, and open processes. We invite our
+                        customers to witness every stage of production.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section style="margin-top: 10rem;" class="reveal">
+            <div class="section-intro">
+                <span class="tagline">Our Growth</span>
+                <h2>The FFFARM Journey</h2>
+            </div>
+            <div class="grid-3">
+                <div class="process-step reveal">
+                    <h5>2021: The Seed</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Inaugurated with $500 and a passion for
+                        heritage Rhode Island Reds.</p>
+                </div>
+                <div class="process-step reveal">
+                    <h5>2023: Going Green</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Transitioned to 100% solar power and
+                        pasture-rotation systems.</p>
+                </div>
+                <div class="process-step reveal">
+                    <h5>2026: Future Proof</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Launching our "Farm-Tech" initiative to share
+                        sustainable data with the community.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Feathery Friends Farm | Peter Maina</p>
-        <p>Email: <a href="mailto:wahomemaina@zetech.ac.ke">wahomemaina@zetech.ac.ke</a></p>
-        <div class="social-links">
-            <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp" width="40"
-                    height="40"></a>
-            <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github" width="40"
-                    height="40"></a>
-            <a href="mailto:peterwahomemaina003@gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="40"
-                    height="40"></a>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">FFFARM.</div>
+                <p style="color: var(--text-dim);">Leading the way in ethical farming practices. Designed for the
+                    community, by the community.</p>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Explore</h5>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="egg.html" style="color: var(--text-dim); text-decoration: none;">Eggs</a></li>
+                    <li><a href="chickens.html" style="color: var(--text-dim); text-decoration: none;">Chickens</a></li>
+                    <li><a href="chicks.html" style="color: var(--text-dim); text-decoration: none;">Chicks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Connect</h5>
+                <div class="social-links">
+                    <a href="https://wa.me/254794797796" target="_blank" class="social-icon"><img src="whatsapp.png"
+                            alt="wa"></a>
+                    <a href="http://github.com/peteMaina" target="_blank" class="social-icon"><img src="github.png"
+                            alt="gh"></a>
+                    <a href="mailto:peterwahomemaina003@gmail.com" target="_blank" class="social-icon"><img
+                            src="gmail.png" alt="gm"></a>
+                </div>
+            </div>
         </div>
+        <p
+            style="text-align: center; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+            &copy; <span id="year"></span> Feathery Friends Farm | Peter Maina
+        </p>
     </footer>
 
     <script src="main.js"></script>

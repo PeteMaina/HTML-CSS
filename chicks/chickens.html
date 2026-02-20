@@ -11,67 +11,185 @@
 
 <body>
     <header>
-        <h1>Feathery Friends Farm</h1>
-        <p>Fresh Eggs, Happy Hens, Healthy Chicks</p>
+        <div class="logo">FFFARM.</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="egg.html">Eggs</a></li>
+                <li><a href="chickens.html" class="active">Chickens</a></li>
+                <li><a href="chicks.html">Chicks</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="egg.html">Eggs</a></li>
-            <li><a href="chickens.html">Chickens</a></li>
-            <li><a href="chicks.html">Chicks</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section>
-            <div class="visual-container">
-                <div class="chicken-container">
-                    <div class="head">
-                        <div class="eye"></div>
-                        <div class="eye"></div>
-                        <div class="beak"></div>
+        <!-- Chickens Hero -->
+        <section class="reveal">
+            <span class="tagline">Our Heritage</span>
+            <h1 class="hero-title">High <span class="accent-text">Quality</span> Poultry.</h1>
+            <p class="hero-subtitle">Raised in the open, fed with the best, and treated with respect. Experience the
+                royalty of poultry, where flavor meets ethical husbandry.</p>
+        </section>
+
+        <div class="bento-grid">
+            <!-- Visual Card -->
+            <div class="bento-item row-2 reveal">
+                <div class="visual-container">
+                    <div class="chicken-container">
+                        <div class="head">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                            <div class="beak"></div>
+                        </div>
+                        <div class="body">
+                            <div class="wing"></div>
+                            <div class="body-feathers"></div>
+                        </div>
+                        <div class="tail-feathers"></div>
+                        <div class="leg left"></div>
+                        <div class="leg right"></div>
                     </div>
-                    <div class="body">
-                        <div class="wing"></div>
-                        <div class="body-feathers"></div>
-                    </div>
-                    <div class="tail-feathers"></div>
-                    <div class="leg left"></div>
-                    <div class="leg right"></div>
                 </div>
             </div>
 
-            <h2>The Royalty of Poultry</h2>
-            <p>Craving a dinner that's both impressive and effortless? Look no further than our whole chickens, raised
-                with care and delivered straight to your door. These aren't your average supermarket birds – they're the
-                undisputed royalty of the poultry world.</p>
-
-            <div class="slider-container">
-                <img src="chickens1.webp" alt="chickens" class="slider-image">
-                <img src="chickens2.png" alt="chickens" class="slider-image">
-                <img src="chicken3.jpg" alt="chickens" class="slider-image">
-                <img src="hens1.jpg" alt="chickens" class="slider-image">
+            <!-- Heritage Card -->
+            <div class="bento-item col-2 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Heritage</span>
+                    <h2>The Royalty of Poultry</h2>
+                    <p style="color: var(--text-dim); margin-top: 1rem;">Our birds are not your typical industrial
+                        breeds. We focus on slow-growing heritage lines like the Rhode Island Red and Sussex, which
+                        offer superior texture and a depth of lean protein that forced-growth birds lack.</p>
+                    <p style="color: var(--text-dim); margin-top: 1rem;">Each bird is raised for a minimum of 84 days,
+                        allowing natural muscle development and a rich, authentic flavor profile to emerge.</p>
+                </div>
             </div>
 
-            <p>Imagine a bird so beautifully plump, seasoned with nature's finest. No artificial enhancements here. Just
-                chickens raised on a wholesome diet, resulting in meat that's naturally juicy, flavorful, and guaranteed
-                to impress at the dinner table.</p>
+            <!-- Product Image -->
+            <div class="bento-item col-1 reveal">
+                <img src="heritage_chicken_portrait.jpg" alt="Majestic heritage hen" class="card-image">
+                <div class="card-content">
+                    <span class="card-tag">Premium</span>
+                </div>
+            </div>
+
+            <!-- Diet Card -->
+            <div class="bento-item col-2 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Natural Diet</span>
+                    <h3>Zero Synthetics. Pure Vitality.</h3>
+                    <p style="color: var(--text-dim); margin-top: 1rem;">Forget artificial Growth Promoters. Our birds
+                        range on biological pastures, supplementing their organic grain with clover, insects, and
+                        mineral-rich herbs. This results in meat that's naturally tender and high in Vitamin A.</p>
+                </div>
+            </div>
+
+            <!-- Lifestyle Image -->
+            <div class="bento-item col-1 reveal">
+                <img src="hens1.jpg" alt="Free range hens in pasture" class="card-image">
+                <div class="card-content">
+                    <span class="card-tag">Free Range</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breed Deep Dive Section -->
+        <section style="margin-top: 10rem;" class="reveal">
+            <div class="section-intro">
+                <span class="tagline">The Flocks</span>
+                <h2 style="font-size: 3rem;">Breed Profiles</h2>
+                <p style="color: var(--text-dim);">We maintain a diverse genetic pool of heritage poultry, each selected
+                    for their adaptability to the local climate and their exceptional contribution to our farm's
+                    ecosystem.</p>
+            </div>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <h5>Rhode Island Red</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 1rem;">The backbone of our farm.
+                        Known for their hardiness and incredible egg-laying capacity, these birds thrive in our
+                        pasture-rotation system.</p>
+                </div>
+                <div class="feature-card">
+                    <h5>Light Sussex</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 1rem;">A dual-purpose classic.
+                        These birds provide exceptional meat quality while being surprisingly docile, making them
+                        perfect for our educational tours.</p>
+                </div>
+                <div class="feature-card">
+                    <h5>Black Australorp</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 1rem;">The heat-resilience
+                        champions. Their vibrant black plumage and calm nature make them an integral part of our summer
+                        grazing groups.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lifecycle Section -->
+        <section
+            style="margin-top: 10rem; background: var(--card-bg); padding: 5rem; border-radius: 40px; border: 1px solid var(--glass-border);"
+            class="reveal">
+            <div class="bento-grid" style="gap: 4rem;">
+                <div class="bento-item col-2">
+                    <span class="tagline">Husbandry</span>
+                    <h2 style="font-size:2.5rem;">A Day in the Life</h2>
+                    <p style="color: var(--text-dim); margin-top: 2rem;">Our birds follow the rhythm of the sun. From
+                        the early dawn forage to the evening return to their clean, spacious coops, every hour is
+                        designed for their comfort and safety.</p>
+                </div>
+                <div class="bento-item col-2">
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
+                        <li style="display: flex; gap: 1rem;">
+                            <span style="color: var(--accent-orange); font-weight: 800;">06:00</span>
+                            <p style="color: var(--text-dim);">Pasture release and first natural forage intake.</p>
+                        </li>
+                        <li style="display: flex; gap: 1rem;">
+                            <span style="color: var(--accent-orange); font-weight: 800;">12:00</span>
+                            <p style="color: var(--text-dim);">Hydration check and supplemental organic grain feeding.
+                            </p>
+                        </li>
+                        <li style="display: flex; gap: 1rem;">
+                            <span style="color: var(--accent-orange); font-weight: 800;">18:00</span>
+                            <p style="color: var(--text-dim);">Safe coop return and individual bird health spot-checks.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Feathery Friends Farm | Peter Maina</p>
-        <div class="social-links">
-            <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp" width="40"
-                    height="40"></a>
-            <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github" width="40"
-                    height="40"></a>
-            <a href="mailto:peterwahomemaina003@gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="40"
-                    height="40"></a>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">FFFARM.</div>
+                <p style="color: var(--text-dim);">Leading the way in ethical farming practices. Designed for the
+                    community, by the community.</p>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Explore</h5>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="egg.html" style="color: var(--text-dim); text-decoration: none;">Eggs</a></li>
+                    <li><a href="chickens.html" style="color: var(--text-dim); text-decoration: none;">Chickens</a></li>
+                    <li><a href="chicks.html" style="color: var(--text-dim); text-decoration: none;">Chicks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Connect</h5>
+                <div class="social-links">
+                    <a href="https://wa.me/254794797796" target="_blank" class="social-icon"><img src="whatsapp.png"
+                            alt="wa"></a>
+                    <a href="http://github.com/peteMaina" target="_blank" class="social-icon"><img src="github.png"
+                            alt="gh"></a>
+                    <a href="mailto:peterwahomemaina003@gmail.com" target="_blank" class="social-icon"><img
+                            src="gmail.png" alt="gm"></a>
+                </div>
+            </div>
         </div>
+        <p
+            style="text-align: center; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+            &copy; <span id="year"></span> Feathery Friends Farm | Peter Maina
+        </p>
     </footer>
 
     <script src="main.js"></script>

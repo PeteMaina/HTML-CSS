@@ -11,67 +11,170 @@
 
 <body>
     <header>
-        <h1>Feathery Friends Farm</h1>
-        <p>Fresh Eggs, Happy Hens, Healthy Chicks</p>
+        <div class="logo">FFFARM.</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="egg.html">Eggs</a></li>
+                <li><a href="chickens.html">Chickens</a></li>
+                <li><a href="chicks.html" class="active">Chicks</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="egg.html">Eggs</a></li>
-            <li><a href="chickens.html">Chickens</a></li>
-            <li><a href="chicks.html">Chicks</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section>
-            <div class="visual-container">
-                <div class="chick-container">
-                    <div class="head">
-                        <div class="eye"></div>
-                        <div class="eye"></div>
-                        <div class="beak"></div>
-                    </div>
-                    <div class="body">
-                        <div class="wing left"></div>
-                        <div class="wing right"></div>
-                        <div class="body-feathers"></div>
+        <!-- Chicks Hero -->
+        <section class="reveal">
+            <span class="tagline">The Beginning</span>
+            <h1 class="hero-title">New <span class="accent-text">Beginnings.</span></h1>
+            <p class="hero-subtitle">Tiny bundles of joy, ready to start their journey. We provide the healthiest, most
+                resilient chicks for your backyard farm or commercial venture.</p>
+        </section>
+
+        <div class="bento-grid">
+            <!-- Visual Card -->
+            <div class="bento-item row-2 reveal">
+                <div class="visual-container">
+                    <div class="chick-container">
+                        <div class="head">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                            <div class="beak"></div>
+                        </div>
+                        <div class="body">
+                            <div class="wing left"></div>
+                            <div class="wing right"></div>
+                            <div class="body-feathers"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <h2>Hatch a World of Joy</h2>
-            <p>Are you dreaming of a backyard filled with fluffy bundles of cuteness? Look no further! Our family-owned
-                hatchery is thrilled to offer a vibrant selection of healthy, adorable chicks, ready to bring joy (and
-                fresh eggs!) to your doorstep.</p>
-
-            <div class="slider-container">
-                <img src="chick-egg.jpg" alt="chicks" class="slider-image">
-                <img src="chicks3.jpg" alt="chicks" class="slider-image">
-                <img src="chicks4.jpg" alt="chicks" class="slider-image">
-                <img src="chicks1.jpg" alt="chicks" class="slider-image">
-                <img src="chickk.webp" alt="chicks" class="slider-image">
+            <!-- Hatchery Card -->
+            <div class="bento-item col-2 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Hatchery</span>
+                    <h2>Hatch a World of Joy</h2>
+                    <p style="color: var(--text-dim); margin-top: 1rem;">Our family-owned hatchery implements a
+                        proprietary "Soft-Start" hatching protocol. By managing atmospheric pressure and light levels
+                        during the pipping phase, we ensure that our chicks emerge with higher energy reserves and
+                        stronger immunity.</p>
+                    <p style="color: var(--text-dim); margin-top: 1rem;">Every chick is quality-certified and vaccinated
+                        before leaving our facility, giving you peace of mind and the best head start for your flock.
+                    </p>
+                </div>
             </div>
 
-            <h2>Explore a Rainbow of Breeds</h2>
-            <p>We take pride in offering a diverse range of chick breeds, each with its own unique charm. From the
-                majestic Rhode Island Red with their fiery plumage to the gentle Cochin with their fluffy feathers,
-                you'll find the perfect feathered friend to match your personality and lifestyle.</p>
+            <!-- Product Image -->
+            <div class="bento-item col-1 reveal">
+                <img src="fluffy_chicks_nest.jpg" alt="FFFarm day-old fluffy chicks" class="card-image">
+                <div class="card-content">
+                    <span class="card-tag">Adorable</span>
+                </div>
+            </div>
+
+            <!-- Lifecycle Card -->
+            <div class="bento-item col-2 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Vitality</span>
+                    <h3>The First 48 Hours</h3>
+                    <p style="color: var(--text-dim); margin-top: 1.5rem;">The most critical phase of a chicken's life.
+                        We provide a detailed "Starter Compass" with every order, covering temperature gradients,
+                        hydration hacks, and the early signs of healthy socialization.</p>
+                </div>
+            </div>
+
+            <!-- Breed Image -->
+            <div class="bento-item col-1 reveal">
+                <img src="chicks1.jpg" alt="Vibrant healthy chicks" class="card-image">
+                <div class="card-content">
+                    <span class="card-tag">Vigorous</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brooding Guide Section -->
+        <section style="margin-top: 10rem;" class="reveal">
+            <div class="section-intro">
+                <span class="tagline">Expert Guide</span>
+                <h2 style="font-size: 3rem;">Brooding Excellence</h2>
+                <p style="color: var(--text-dim);">Success in poultry starts in the brooder. Our experts have distilled
+                    decades of experience into these three pillars of early-stage husbandry.</p>
+            </div>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <h5>Thermal Precision</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-top: 1rem;">Maintaining a steady 35°C
+                        (95°F) for the first week is vital. Our guides show you how to create a "warm zone" and a "cool
+                        zone" to let chicks self-regulate.</p>
+                </div>
+                <div class="feature-card">
+                    <h5>Immune Defense</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-top: 1rem;">We ship chicks with an
+                        initial electrolyte and probiotic boost already in their system, reducing "shipping stress" and
+                        promoting gut health.</p>
+                </div>
+                <div class="feature-card">
+                    <h5>Social Habitat</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-top: 1rem;">Light cycles play a huge
+                        role in growth. Learn how to manage resting periods to optimize bone development and reduce
+                        pecking behaviors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section
+            style="margin-top: 10rem; background: var(--card-bg); padding: 5rem; border-radius: 40px; border: 1px solid var(--glass-border);"
+            class="reveal">
+            <h2 style="margin-bottom: 3rem;">Hatchery FAQ</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div>
+                    <h5 style="color: var(--accent-orange); margin-bottom: 1rem;">What is the minimum order?</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">To ensure chick safety during transport
+                        (maintaining body heat), we require a minimum of 25 chicks for deliveries outside Nairobi.</p>
+                </div>
+                <div>
+                    <h5 style="color: var(--accent-orange); margin-bottom: 1rem;">Are they vaccinated?</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Yes. All FFFARM chicks receive the standard
+                        Mareks and Gumboro vaccinations at hatch as part of our biosecurity commitment.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Feathery Friends Farm | Peter Maina</p>
-        <div class="social-links">
-            <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp" width="40"
-                    height="40"></a>
-            <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github" width="40"
-                    height="40"></a>
-            <a href="mailto:peterwahomemaina003@gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="40"
-                    height="40"></a>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">FFFARM.</div>
+                <p style="color: var(--text-dim);">Leading the way in ethical farming practices. Designed for the
+                    community, by the community.</p>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Explore</h5>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="egg.html" style="color: var(--text-dim); text-decoration: none;">Eggs</a></li>
+                    <li><a href="chickens.html" style="color: var(--text-dim); text-decoration: none;">Chickens</a></li>
+                    <li><a href="chicks.html" style="color: var(--text-dim); text-decoration: none;">Chicks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Connect</h5>
+                <div class="social-links">
+                    <a href="https://wa.me/254794797796" target="_blank" class="social-icon"><img src="whatsapp.png"
+                            alt="wa"></a>
+                    <a href="http://github.com/peteMaina" target="_blank" class="social-icon"><img src="github.png"
+                            alt="gh"></a>
+                    <a href="mailto:peterwahomemaina003@gmail.com" target="_blank" class="social-icon"><img
+                            src="gmail.png" alt="gm"></a>
+                </div>
+            </div>
         </div>
+        <p
+            style="text-align: center; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+            &copy; <span id="year"></span> Feathery Friends Farm | Peter Maina
+        </p>
     </footer>
 
     <script src="main.js"></script>

@@ -1,50 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feathery Friends Farm | Home</title>
+    <title>Feathery Friends Farm | The Future of Poultry</title>
     <link rel="stylesheet" href="global.css">
 </head>
+
 <body>
     <header>
-        <h1>Feathery Friends Farm</h1>
-        <p>Fresh Eggs, Happy Hens, Healthy Chicks</p>
+        <div class="logo">FFFARM.</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html" class="active">Home</a></li>
+                <li><a href="egg.html">Eggs</a></li>
+                <li><a href="chickens.html">Chickens</a></li>
+                <li><a href="chicks.html">Chicks</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="egg.html">Eggs</a></li>
-            <li><a href="chickens.html">Chickens</a></li>
-            <li><a href="chicks.html">Chicks</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section class="hero">
-            <h2>Welcome to Feathery Friends Farm!</h2>
-            <p>We are a family-owned farm dedicated to providing fresh, high-quality eggs, happy and healthy chickens, and adorable chicks to our community.</p>
-            <div class="video-container">
-                <video controls autoplay muted loop>
-                    <source src="farm_tour.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+        <!-- Hero Section -->
+        <section class="reveal">
+            <span class="tagline">Established 2021</span>
+            <h1 class="hero-title">Beyond <br><span class="accent-text">Organic.</span></h1>
+            <p class="hero-subtitle">Redefining the relationship between farm and community through transparency, care,
+                and quality. We're not just a farm; we're a movement toward ethical poultry standards.</p>
+        </section>
+
+        <!-- Bento Category Grid -->
+        <div class="bento-grid">
+            <!-- Main Video/Hero Card -->
+            <div class="bento-item col-2 row-2 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Operational Showcase</span>
+                    <h2>Experience the <br>Farm Life</h2>
+                    <p style="color: var(--text-dim); margin-bottom: 2rem;">Witness the harmony of nature and
+                        technology. Our daily operations are open for student tours and local visits.</p>
+                    <div class="video-container" style="margin-top: auto;">
+                        <video autoplay muted loop playsinline style="width: 100%; border-radius: 20px;">
+                            <source src="farm_tour.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
             </div>
-            <p>Explore our website to learn more about our products and what makes Feathery Friends Farm special.</p>
+
+            <!-- Lifestyle Image Card -->
+            <div class="bento-item col-2 reveal">
+                <img src="modern_farm_hero.jpg" alt="FFFarm cinematic landscape" class="card-image">
+                <div class="card-content">
+                    <span class="card-tag">Atmosphere</span>
+                    <h3>Rooted in <br>The Valley</h3>
+                </div>
+            </div>
+
+            <!-- Stats Module -->
+            <div class="bento-item col-1 reveal">
+                <div class="card-content">
+                    <span class="stat-value" style="color: var(--accent-orange);">45k+</span>
+                    <span class="stat-label">Happy Chicks Hatched</span>
+                </div>
+            </div>
+
+            <div class="bento-item col-1 reveal">
+                <div class="card-content">
+                    <span class="stat-value" style="color: var(--accent-green);">100%</span>
+                    <span class="stat-label">Solar Powered</span>
+                </div>
+            </div>
+
+            <!-- Product Shortcuts -->
+            <div class="bento-item col-1 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Featured</span>
+                    <h3>Golden <br>Eggs</h3>
+                    <a href="egg.html"
+                        style="margin-top: auto; color: var(--accent-orange); text-decoration: none; font-weight: 600;">Shop
+                        Now →</a>
+                </div>
+            </div>
+
+            <div class="bento-item col-1 reveal">
+                <div class="card-content">
+                    <span class="card-tag">Heritage</span>
+                    <h3>Pasture <br>Hens</h3>
+                    <a href="chickens.html"
+                        style="margin-top: auto; color: var(--accent-orange); text-decoration: none; font-weight: 600;">Explore
+                        →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Our Philosophy (Content Expansion) -->
+        <section style="margin-top: 10rem;" class="reveal">
+            <div class="section-intro">
+                <span class="tagline">Our Philosophy</span>
+                <h2 style="font-size: 3.5rem; margin-bottom: 2rem;">Wellness by Design</h2>
+                <p style="font-size: 1.25rem; color: var(--text-dim);">At FFFARM, we believe that the health of our
+                    community is directly linked to the health of our livestock. That's why we've pioneered a "Wellness
+                    by Design" framework that prioritizes bird happiness as much as output.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="feature-card reveal-left">
+                    <h4 style="margin-bottom: 1rem;">Ethical Brooding</h4>
+                    <p style="color: var(--text-dim);">Our chicks are raised with meticulous temperature control and
+                        bio-isolated environments to ensure zero-stress growth from day one.</p>
+                </div>
+                <div class="feature-card reveal-left" style="transition-delay: 0.1s;">
+                    <h4 style="margin-bottom: 1rem;">Pasture Wisdom</h4>
+                    <p style="color: var(--text-dim);">By rotating our hens across nutrient-dense pastures, we maintain
+                        soil health while giving our birds a diverse, natural diet.</p>
+                </div>
+                <div class="feature-card reveal-left" style="transition-delay: 0.2s;">
+                    <h4 style="margin-bottom: 1rem;">Community First</h4>
+                    <p style="color: var(--text-dim);">We don't just sell eggs; we provide educational workshops for
+                        local schools to foster the next generation of ethical farmers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: The Hatching Process (Process Expansion) -->
+        <section style="margin-top: 10rem;">
+            <div class="bento-grid">
+                <div class="bento-item col-2 reveal">
+                    <span class="tagline">The Lifecycle</span>
+                    <h2 style="font-size: 3rem;">From Nest to <br>Your Table</h2>
+                    <p style="color: var(--text-dim); margin-top: 2rem;">Transparency is the cornerstone of our
+                        operations. Follow our five-step lifecycle to understand how we maintain the highest standards
+                        in the industry.</p>
+                </div>
+
+                <div class="bento-item col-2 reveal">
+                    <div style="margin-top: 1rem;">
+                        <div class="process-step">
+                            <h5>Phase 01: Selection</h5>
+                            <p style="font-size: 0.9rem; color: var(--text-dim);">We only hatch eggs from our
+                                healthiest, most vibrant heritage hens to ensure strong genetic vitality.</p>
+                        </div>
+                        <div class="process-step">
+                            <h5>Phase 02: Incubation</h5>
+                            <p style="font-size: 0.9rem; color: var(--text-dim);">State-of-the-art climate control
+                                mimics the natural warmth of a mother hen, with precise humidity management.</p>
+                        </div>
+                        <div class="process-step">
+                            <h5>Phase 03: Hatch Day</h5>
+                            <p style="font-size: 0.9rem; color: var(--text-dim);">A supervised, low-light environment
+                                allows chicks to enter the world in peace and safety.</p>
+                        </div>
+                        <div class="process-step">
+                            <h5>Phase 04: Growth</h5>
+                            <p style="font-size: 0.9rem; color: var(--text-dim);">Pasture rotation begins as soon as the
+                                chicks are weather-ready, fostering natural instincts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Sustainability -->
+        <section
+            style="margin-top: 10rem; background: var(--card-bg); padding: 8rem 10%; border-radius: 64px; border: 1px solid var(--glass-border);"
+            class="reveal">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <span class="tagline" style="justify-content: center;">Sustainability Pledge</span>
+                <h2 style="font-size: 4rem; margin-bottom: 2rem;">Carbon Neutral <br>by 2028</h2>
+                <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem;">We are committed to a
+                    sustainable future. Through re-generative grazing, solar integration, and 100% plastic-free
+                    packaging, we're cutting our footprint every single day.</p>
+                <div style="display: flex; gap: 2rem; justify-content: center;">
+                    <div class="feature-card" style="flex: 1;">
+                        <span class="stat-value" style="font-size: 2rem;">-40%</span>
+                        <p style="color: var(--text-dim);">Water Waste</p>
+                    </div>
+                    <div class="feature-card" style="flex: 1;">
+                        <span class="stat-value" style="font-size: 2rem;">No-GHG</span>
+                        <p style="color: var(--text-dim);">Operations</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Feathery Friends Farm | Peter Maina</p>
-        <div class="social-links">
-            <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp" width="40" height="40"></a>
-            <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github" width="40" height="40"></a>
-            <a href="mailto:peterwahomemaina003@gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="40" height="40"></a>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">FFFARM.</div>
+                <p style="color: var(--text-dim);">Leading the way in ethical farming practices. Designed for the
+                    community, by the community.</p>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Explore</h5>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="egg.html" style="color: var(--text-dim); text-decoration: none;">Eggs</a></li>
+                    <li><a href="chickens.html" style="color: var(--text-dim); text-decoration: none;">Chickens</a></li>
+                    <li><a href="chicks.html" style="color: var(--text-dim); text-decoration: none;">Chicks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="margin-bottom: 1rem; text-transform: uppercase; font-size: 0.8rem;">Connect</h5>
+                <div class="social-links">
+                    <a href="https://wa.me/254794797796" target="_blank" class="social-icon"><img src="whatsapp.png"
+                            alt="wa"></a>
+                    <a href="http://github.com/peteMaina" target="_blank" class="social-icon"><img src="github.png"
+                            alt="gh"></a>
+                    <a href="mailto:peterwahomemaina003@gmail.com" target="_blank" class="social-icon"><img
+                            src="gmail.png" alt="gm"></a>
+                </div>
+            </div>
         </div>
+        <p
+            style="text-align: center; color: var(--text-dim); font-size: 0.8rem; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+            &copy; <span id="year"></span> Feathery Friends Farm | Peter Maina
+        </p>
     </footer>
 
     <script src="main.js"></script>
 </body>
+
 </html>
