@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feathery Friends Farm - Chick</title>
+    <title>Feathery Friends Farm | Chicks</title>
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="chicks.css">
 </head>
+
 <body>
-    <div class="chick-container">
-        <div class="head">
-            <div class="eye"></div>
-            <div class="eye"></div>
-            <div class="beak"></div>
-        </div>
-        <div class="body">
-            <div class="wing left"></div>
-            <div class="wing right"></div>
-            <div class="body-feathers"></div>
-        </div>
-    </div>
+    <header>
+        <h1>Feathery Friends Farm</h1>
+        <p>Fresh Eggs, Happy Hens, Healthy Chicks</p>
+    </header>
+
     <nav>
         <ul>
             <li><a href="homepage.html">Home</a></li>
@@ -29,45 +25,56 @@
         </ul>
     </nav>
 
-    <p>Hatch a World of Joy: Welcome to Our Feathery Friends!
-        Are you dreaming of a backyard filled with fluffy bundles of cuteness? Look no further! Our family-owned hatchery is thrilled to offer a vibrant selection of healthy, adorable chicks, ready to bring joy (and fresh eggs!) to your doorstep.
-        
-    </p>
+    <main>
+        <section>
+            <div class="visual-container">
+                <div class="chick-container">
+                    <div class="head">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                        <div class="beak"></div>
+                    </div>
+                    <div class="body">
+                        <div class="wing left"></div>
+                        <div class="wing right"></div>
+                        <div class="body-feathers"></div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="slider-container">
-        <img src="chick-egg.jpg" alt="chicks" class="slider-image">
-        <img src="chicks3.jpg" alt="chicks" class="slider-image">
-        <img src="chicks4.jpg" alt="chicks" class="slider-image">
-        <img src="chicks1.jpg" alt="chicks" class="slider-image">
-        <img src="chickk.webp" alt="chicks" class="slider-image">
-      </div>
-    <p>
-        Explore a Rainbow of Breeds:
-        
-        We take pride in offering a diverse range of chick breeds, each with its own unique charm. From the majestic Rhode Island Red with their fiery plumage to the gentle Cochin with their fluffy feathers, you'll find the perfect feathered friend to match your personality and lifestyle
-    </p>
+            <h2>Hatch a World of Joy</h2>
+            <p>Are you dreaming of a backyard filled with fluffy bundles of cuteness? Look no further! Our family-owned
+                hatchery is thrilled to offer a vibrant selection of healthy, adorable chicks, ready to bring joy (and
+                fresh eggs!) to your doorstep.</p>
+
+            <div class="slider-container">
+                <img src="chick-egg.jpg" alt="chicks" class="slider-image">
+                <img src="chicks3.jpg" alt="chicks" class="slider-image">
+                <img src="chicks4.jpg" alt="chicks" class="slider-image">
+                <img src="chicks1.jpg" alt="chicks" class="slider-image">
+                <img src="chickk.webp" alt="chicks" class="slider-image">
+            </div>
+
+            <h2>Explore a Rainbow of Breeds</h2>
+            <p>We take pride in offering a diverse range of chick breeds, each with its own unique charm. From the
+                majestic Rhode Island Red with their fiery plumage to the gentle Cochin with their fluffy feathers,
+                you'll find the perfect feathered friend to match your personality and lifestyle.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Feathery Friends Farm | Peter Maina</p>
+        <div class="social-links">
+            <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp" width="40"
+                    height="40"></a>
+            <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github" width="40"
+                    height="40"></a>
+            <a href="mailto:peterwahomemaina003@gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="40"
+                    height="40"></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 
-<footer>
-    <p>&copy; 2025 Feathery Friends Farm </p>
-    <p>contact +254794797796</p>
-    
-
-        <script>
-           function clock(){
-            var today = new Date();
-            var year = today.getFullYear();
-    
-            year = year
-            document.getElementById("year").innerHTML = year;
-           } 
-           clock();
-        </script>
-    
-        &#169 <span id="year"></span> Peter Maina <br>
-        <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp contact" width="35" height="35" style="margin-right: 25px;"></a>
-        <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github contact" width="35" height="35" style="margin-right: 25px;"></a>
-        <a href="mailto:peterwahomemaina003#gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="35" height="35"></a>
-    
-</footer>
 </html>

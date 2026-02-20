@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feathery Friends Farm</title>
-    <link rel="stylesheet" href="homepage.css">
+    <title>Feathery Friends Farm | Home</title>
+    <link rel="stylesheet" href="global.css">
 </head>
 <body>
     <header>
@@ -12,7 +12,7 @@
         <p>Fresh Eggs, Happy Hens, Healthy Chicks</p>
     </header>
 
-    <nav class="choc">
+    <nav>
         <ul>
             <li><a href="homepage.html">Home</a></li>
             <li><a href="egg.html">Eggs</a></li>
@@ -27,7 +27,7 @@
             <h2>Welcome to Feathery Friends Farm!</h2>
             <p>We are a family-owned farm dedicated to providing fresh, high-quality eggs, happy and healthy chickens, and adorable chicks to our community.</p>
             <div class="video-container">
-                <video width="560" height="315" controls autoplay muted loop>
+                <video controls autoplay muted loop>
                     <source src="farm_tour.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -37,26 +37,14 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Feathery Friends Farm </p>
-        <p>contact +254794797796</p>
-        
-    
-            <script>
-               function clock(){
-                var today = new Date();
-                var year = today.getFullYear();
-        
-                year = year
-                document.getElementById("year").innerHTML = year;
-               } 
-               clock();
-            </script>
-        
-            &#169 <span id="year"></span> Peter Maina <br>
-            <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp contact" width="35" height="35" style="margin-right: 25px;"></a>
-            <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github contact" width="35" height="35" style="margin-right: 25px;"></a>
-            <a href="mailto:peterwahomemaina003#gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="35" height="35"></a>
-        
+        <p>&copy; <span id="year"></span> Feathery Friends Farm | Peter Maina</p>
+        <div class="social-links">
+            <a href="https://wa.me/254794797796" target="_blank"> <img src="whatsapp.png" alt="whatsapp" width="40" height="40"></a>
+            <a href="http://github.com/peteMaina" target="_blank"><img src="github.png" alt="github" width="40" height="40"></a>
+            <a href="mailto:peterwahomemaina003@gmail.com" target="_blank"><img src="gmail.png" alt="gmail" width="40" height="40"></a>
+        </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
