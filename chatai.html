@@ -39,7 +39,7 @@
             height: 90vh;
             display: grid;
             grid-template-columns: 300px 1fr;
-            grid-template-rows: 1fr;
+            grid-template-rows: 1fr auto;
             gap: 20px;
             animation: fadeIn 0.5s ease;
         }
@@ -491,6 +491,15 @@
                 padding: 12px 15px;
             }
         }
+
+        /* Footer styles */
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -558,9 +567,19 @@
                 </form>
             </div>
         </div>
+        <footer> &#169; <span id="copyrightYear"></span> | All rights reserved | Peter Maina </footer>
     </div>
 
     <script>
+        // Function to update the copyright year
+        function updateCopyrightYear() {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('copyrightYear').textContent = currentYear;
+        }
+        
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', updateCopyrightYear);
+
         // Main ChatApp class to handle all chat functionality
         class ChatApp {
             constructor() {
@@ -1039,5 +1058,4 @@
 
     </script>
 </body>
-<footer> &#169 2025 | All rights reserved | Peter Maina </footer>
 </html>
