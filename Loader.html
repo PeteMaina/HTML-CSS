@@ -3,36 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Load</title>
-
+    <title>Pete AI - Loading</title>
     <style>
-        body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: 100vh;
-          background-color: #222;
-        }
-    
-        .loader {
-          width: 60px;
-          height: 60px;
-          border: 10px solid #f0f0f0;
-          border-radius: 50%;
-          border-top-color: #3498db; 
-          animation: spin 1s linear infinite;
-        }
-    
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-      </style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #0a0a0f;
+            overflow: hidden;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Ambient background */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(110, 142, 251, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(167, 119, 227, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(66, 230, 149, 0.05) 0%, transparent 70%);
+            animation: ambientPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes ambientPulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        .loader-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* AI Core - Central glowing orb */
+        .ai-core {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3, #42e695);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 30px rgba(110, 142, 251, 0.6),
+                0 0 60px rgba(167, 119, 227, 0.4),
+                0 0 100px rgba(66, 230, 149, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.3);
+            animation: corePulse 2s ease-in-out infinite, coreGlow 3s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        @keyframes corePulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 
+                    0 0 30px rgba(110, 142, 251, 0.6),
+                    0 0 60px rgba(167, 119, 227, 0.4),
+                    0 0 100px rgba(66, 230, 149, 0.2);
+            }
+            50% { 
+                transform: scale(1.15);
+                box-shadow: 
+                    0 0 50px rgba(110, 142, 251, 0.8),
+                    0 0 80px rgba(167, 119, 227, 0.6),
+                    0 0 120px rgba(66, 230, 149, 0.4);
+            }
+        }
+
+        @keyframes coreGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        /* Neural ring - First orbit */
+        .neural-ring {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 2px solid transparent;
+            border-top: 2px solid rgba(110, 142, 251, 0.7);
+            border-right: 2px solid rgba(110, 142, 251, 0.7);
+            border-radius: 50%;
+            animation: neuralOrbit 3s linear infinite;
+            box-shadow: 0 0 15px rgba(110, 142, 251, 0.3);
+        }
+
+        @keyframes neuralOrbit {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Data ring - Second orbit (counter-clockwise) */
+        .data-ring {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            border: 2px solid transparent;
+            border-bottom: 2px solid rgba(167, 119, 227, 0.7);
+            border-left: 2px solid rgba(167, 119, 227, 0.7);
+            border-radius: 50%;
+            animation: dataOrbit 4s linear infinite reverse;
+            box-shadow: 0 0 15px rgba(167, 119, 227, 0.3);
+        }
+
+        @keyframes dataOrbit {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-360deg); }
+        }
+
+        /* Processing ring - Third orbit */
+        .process-ring {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid transparent;
+            border-top: 1px solid rgba(66, 230, 149, 0.5);
+            border-radius: 50%;
+            animation: processOrbit 5s linear infinite;
+            box-shadow: 0 0 10px rgba(66, 230, 149, 0.2);
+            opacity: 0.7;
+        }
+
+        @keyframes processOrbit {
+            0% { transform: rotate(0deg) scale(0.9); }
+            50% { opacity: 1; }
+            100% { transform: rotate(360deg) scale(0.9); }
+        }
+
+        /* Neural nodes - Floating particles */
+        .neural-node {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #6e8efb;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #6e8efb;
+            animation: nodeFloat 2s ease-in-out infinite;
+        }
+
+        .neural-node:nth-child(1) {
+            top: 10%;
+            left: 50%;
+            animation-delay: 0s;
+        }
+
+        .neural-node:nth-child(2) {
+            top: 50%;
+            right: 10%;
+            animation-delay: 0.5s;
+            background: #a777e3;
+            box-shadow: 0 0 10px #a777e3;
+        }
+
+        .neural-node:nth-child(3) {
+            bottom: 10%;
+            left: 50%;
+            animation-delay: 1s;
+            background: #42e695;
+            box-shadow: 0 0 10px #42e695;
+        }
+
+        .neural-node:nth-child(4) {
+            top: 50%;
+            left: 10%;
+            animation-delay: 1.5s;
+            background: #6e8efb;
+            box-shadow: 0 0 10px #6e8efb;
+        }
+
+        @keyframes nodeFloat {
+            0%, 100% { 
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
+            50% { 
+                transform: translateY(-10px) scale(1.3);
+                opacity: 1;
+            }
+        }
+
+        /* Data bits - Small flying particles */
+        .data-bit {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            animation: dataFlow 2s ease-in-out infinite;
+        }
+
+        .data-bit:nth-child(5) { animation-delay: 0s; }
+        .data-bit:nth-child(6) { animation-delay: 0.3s; }
+        .data-bit:nth-child(7) { animation-delay: 0.6s; }
+        .data-bit:nth-child(8) { animation-delay: 0.9s; }
+
+        @keyframes dataFlow {
+            0% {
+                transform: translate(0, 0) scale(0);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+                transform: translate(20px, -20px) scale(1);
+            }
+            80% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(40px, -40px) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Loading text */
+        .loading-text {
+            position: absolute;
+            bottom: -50px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: textPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes textPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .loading-text span {
+            animation: textDots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes textDots {
+            0% { content: ''; }
+            25% { content: '.'; }
+            50% { content: '..'; }
+            75% { content: '...'; }
+        }
+
+        /* Glitch effect overlay */
+        .glitch {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            animation: glitchEffect 3s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes glitchEffect {
+            0%, 100% { 
+                background: transparent;
+            }
+            92% { 
+                background: transparent;
+            }
+            93% { 
+                background: rgba(110, 142, 251, 0.03);
+            }
+            94% { 
+                background: transparent;
+            }
+            96% { 
+                background: rgba(167, 119, 227, 0.02);
+            }
+            97% { 
+                background: transparent;
+            }
+        }
+
+        /* Pete AI text reveal */
+        .brand-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: brandReveal 4s ease-in-out infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes brandReveal {
+            0%, 70% { 
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            85% { 
+                opacity: 0.4;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            100% { 
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+
+        /* Outer scanning ring */
+        .scan-ring {
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border: 1px solid rgba(110, 142, 251, 0.2);
+            border-radius: 50%;
+            animation: scanPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes scanPulse {
+            0%, 100% { 
+                transform: scale(0.8);
+                opacity: 0.3;
+            }
+            50% { 
+                transform: scale(1);
+                opacity: 0.8;
+            }
+        }
+    </style>
 </head>
 <body>
-    
-    <div class="loader"></div>
+    <div class="loader-container">
+        <!-- Ambient background pulse -->
+        <div class="glitch"></div>
+        
+        <!-- Outer scan ring -->
+        <div class="scan-ring"></div>
+        
+        <!-- Processing ring (outermost) -->
+        <div class="process-ring"></div>
+        
+        <!-- Data ring (middle) -->
+        <div class="data-ring"></div>
+        
+        <!-- Neural ring (inner) -->
+        <div class="neural-ring"></div>
+        
+        <!-- Central AI Core -->
+        <div class="ai-core"></div>
+        
+        <!-- Neural nodes -->
+        <div class="neural-node"></div>
+        <div class="neural-node"></div>
+        <div class="neural-node"></div>
+        <div class="neural-node"></div>
+        
+        <!-- Data bits -->
+        <div class="data-bit"></div>
+        <div class="data-bit"></div>
+        <div class="data-bit"></div>
+        <div class="data-bit"></div>
+        
+        <!-- Brand reveal -->
+        <div class="brand-text">PETE AI</div>
+        
+        <!-- Loading text -->
+        <div class="loading-text">Processing<span>...</span></div>
+    </div>
 
+    <script>
+        // Dynamic year for any footer reference
+        document.addEventListener('DOMContentLoaded', () => {
+            // The loader is purely visual - no JS logic needed
+            // This ensures smooth CSS-only animation performance
+        });
+    </script>
 </body>
 </html>
