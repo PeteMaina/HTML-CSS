@@ -103,8 +103,81 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color:coral ;
+    color: #fff;
     bottom: 0;
     margin-bottom: 0px;
     position: fixed;
-  }
+    width: 100%;
+    padding: 15px 0;
+    background: linear-gradient(to top, rgba(21, 78, 117, 0.9), transparent);
+}
+
+footer p {
+    font-size: 14px;
+    text-align: center;
+}
+
+footer .developer-link {
+    color: #7fb7c9;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding: 2px 4px;
+    margin-left: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Underline effect */
+footer .developer-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #7fb7c9, #42e695, #7fb7c9);
+    background-size: 200% 100%;
+    animation: linkGradient 3s linear infinite;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+@keyframes linkGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* Hover effect - underline grows */
+footer .developer-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Glow effect on hover */
+footer .developer-link:hover {
+    color: #42e695;
+    text-shadow: 
+        0 0 5px rgba(66, 230, 149, 0.5),
+        0 0 10px rgba(66, 230, 149, 0.3),
+        0 0 20px rgba(66, 230, 149, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Subtle pulse animation when idle */
+footer .developer-link {
+    animation: subtlePulse 2s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+    0%, 100% { 
+        opacity: 1;
+    }
+    50% { 
+        opacity: 0.85;
+    }
+}
+
+/* Cursor change to indicate clickable */
+footer .developer-link {
+    cursor: pointer;
+}

@@ -496,9 +496,70 @@
         footer {
             grid-column: 1 / -1;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             font-size: 0.9rem;
             opacity: 0.8;
+        }
+
+        footer .developer-link {
+            color: #a777e3;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            padding: 2px 4px;
+            margin-left: 4px;
+            transition: all 0.3s ease;
+        }
+
+        /* Animated underline effect */
+        footer .developer-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #6e8efb, #42e695, #a777e3);
+            background-size: 200% 100%;
+            animation: linkGradientFlow 3s linear infinite;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes linkGradientFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        /* Hover effect - underline grows and glow */
+        footer .developer-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Glow effect on hover */
+        footer .developer-link:hover {
+            color: #42e695;
+            text-shadow: 
+                0 0 5px rgba(66, 230, 149, 0.5),
+                0 0 10px rgba(66, 230, 149, 0.3),
+                0 0 20px rgba(66, 230, 149, 0.2);
+            transform: translateY(-1px);
+        }
+
+        /* Subtle pulse animation when idle */
+        footer .developer-link {
+            animation: subtlePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes subtlePulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        /* Cursor change to indicate clickable */
+        footer .developer-link {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -567,7 +628,7 @@
                 </form>
             </div>
         </div>
-        <footer> &#169; <span id="copyrightYear"></span> | All rights reserved | Peter Maina </footer>
+        <footer> &#169; <span id="copyrightYear"></span> | All rights reserved | <a href="https://mainapeter.netlify.app" target="_blank" rel="noopener noreferrer" class="developer-link">Peter Maina</a> </footer>
     </div>
 
     <script>
