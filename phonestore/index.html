@@ -1,0 +1,3010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhoneVault - Premium Phones | New, Used & Refurbished</title>
+  <meta name="description"
+    content="PhoneVault - Your trusted source for premium smartphones. We import phones from global marketplaces offering New, Used, and Refurbished devices with warranty.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root {
+      --color-bg: #FAFBFC;
+      --color-bg-alt: #F1F5F9;
+      --color-bg-dark: #0F172A;
+      --color-dark: #0A0A0A;
+      --color-dark-secondary: #1E293B;
+      --color-text: #1E293B;
+      --color-text-muted: #64748B;
+      --color-text-light: #94A3B8;
+      --color-accent: #6366F1;
+      --color-accent-hover: #4F46E5;
+      --color-accent-light: #EEF2FF;
+      --color-success: #10B981;
+      --color-success-light: #D1FAE5;
+      --color-warning: #F59E0B;
+      --color-warning-light: #FEF3C7;
+      --color-error: #EF4444;
+      --color-error-light: #FEE2E2;
+      --color-info: #0EA5E9;
+      --color-info-light: #E0F2FE;
+      --color-border: #E2E8F0;
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 64px;
+      --space-4xl: 96px;
+      --space-5xl: 128px;
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      --transition-fast: 150ms ease;
+      --transition-base: 250ms ease;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--color-bg);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--color-dark);
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 48px);
+    }
+
+    h3 {
+      font-size: clamp(22px, 3vw, 32px);
+    }
+
+    h4 {
+      font-size: clamp(18px, 2vw, 24px);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--color-accent) 0%, #8B5CF6 50%, #EC4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-muted {
+      color: var(--color-text-muted);
+    }
+
+    .text-light {
+      color: var(--color-text-light);
+    }
+
+    .text-success {
+      color: var(--color-success);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-xs {
+      margin-bottom: var(--space-xs);
+    }
+
+    .mb-sm {
+      margin-bottom: var(--space-sm);
+    }
+
+    .mb-md {
+      margin-bottom: var(--space-md);
+    }
+
+    .mb-lg {
+      margin-bottom: var(--space-lg);
+    }
+
+    .mb-xl {
+      margin-bottom: var(--space-xl);
+    }
+
+    .mb-2xl {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .mb-3xl {
+      margin-bottom: var(--space-3xl);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+
+    .section {
+      padding: var(--space-5xl) 0;
+    }
+
+    .section-sm {
+      padding: var(--space-4xl) 0;
+    }
+
+    .section-dark {
+      background: var(--color-bg-dark);
+      color: white;
+    }
+
+    .section-alt {
+      background: var(--color-bg-alt);
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: var(--space-md) 0;
+      transition: all var(--transition-base);
+      background: rgba(250, 251, 252, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .nav-logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--color-accent) 0%, #8B5CF6 100%);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xl);
+      list-style: none;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--color-text-muted);
+      transition: color var(--transition-fast);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--color-accent);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .nav-icon-btn {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-md);
+      color: var(--color-text-muted);
+      transition: all var(--transition-fast);
+    }
+
+    .nav-icon-btn:hover {
+      background: var(--color-bg-alt);
+      color: var(--color-accent);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-lg);
+      background: var(--color-accent);
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+      border-radius: var(--radius-full);
+      transition: all var(--transition-base);
+    }
+
+    .nav-cta:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      padding: var(--space-md) var(--space-xl);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      transition: all var(--transition-base);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--color-accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(99, 102, 241, 0.35);
+    }
+
+    .btn-secondary {
+      background: var(--color-dark);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-dark-secondary);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--color-dark);
+      border: 2px solid var(--color-border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: white;
+      color: var(--color-dark);
+      border: 1px solid var(--color-border);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--color-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-success {
+      background: var(--color-success);
+      color: white;
+    }
+
+    .btn-lg {
+      padding: var(--space-lg) var(--space-2xl);
+      font-size: 17px;
+    }
+
+    .btn-sm {
+      padding: var(--space-sm) var(--space-md);
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 100px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #FAFBFC 0%, #EEF2FF 50%, #F5F3FF 100%);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.06) 0%, transparent 50%);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--space-4xl);
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: white;
+      color: var(--color-accent);
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-lg);
+      box-shadow: 0 2px 12px rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--color-success);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .hero-title {
+      margin-bottom: var(--space-lg);
+      line-height: 1.1;
+    }
+
+    .hero-description {
+      font-size: 18px;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-xl);
+      line-height: 1.7;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: var(--space-3xl);
+      margin-bottom: var(--space-xl);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .hero-stat-item {
+      text-align: left;
+    }
+
+    .hero-stat-value {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--color-dark);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      margin-top: var(--space-xs);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-phones {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md);
+      transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    }
+
+    .hero-phone-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: var(--space-md);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      transition: all var(--transition-base);
+    }
+
+    .hero-phone-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-phone-card:nth-child(2) {
+      transform: translateY(-20px);
+    }
+
+    .hero-phone-card:nth-child(2):hover {
+      transform: translateY(-30px);
+    }
+
+    .hero-phone-image {
+      width: 100%;
+      aspect-ratio: 9/16;
+      background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-phone-image::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+    }
+
+    .hero-phone-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: var(--space-xs);
+    }
+
+    .hero-phone-price {
+      font-size: 14px;
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    .search-section {
+      background: var(--color-bg-dark);
+      padding: var(--space-3xl) 0;
+    }
+
+    .search-box {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: var(--space-lg) var(--space-lg) var(--space-lg) 60px;
+      font-family: var(--font-body);
+      font-size: 17px;
+      border: none;
+      border-radius: var(--radius-full);
+      background: white;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .search-input:focus {
+      outline: none;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text-muted);
+    }
+
+    .search-filters {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+      flex-wrap: wrap;
+    }
+
+    .search-filter {
+      padding: var(--space-sm) var(--space-md);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-full);
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all var(--transition-fast);
+    }
+
+    .search-filter:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .category-tabs {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-3xl);
+      flex-wrap: wrap;
+    }
+
+    .category-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md) var(--space-xl);
+      background: white;
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 15px;
+      transition: all var(--transition-base);
+    }
+
+    .category-tab:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    .category-tab.active {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: white;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto var(--space-3xl);
+    }
+
+    .section-header h2 {
+      margin-bottom: var(--space-md);
+    }
+
+    .section-header p {
+      color: var(--color-text-muted);
+      font-size: 17px;
+    }
+
+    .phones-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .phone-card {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      transition: all var(--transition-base);
+    }
+
+    .phone-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      border-color: transparent;
+    }
+
+    .phone-image {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .phone-image-placeholder {
+      width: 60%;
+      height: 80%;
+      background: linear-gradient(145deg, #374151 0%, #1F2937 100%);
+      border-radius: 16px;
+      position: relative;
+    }
+
+    .phone-image-placeholder::before {
+      content: '';
+      position: absolute;
+      top: 8%;
+      left: 10%;
+      right: 10%;
+      height: 5%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+    }
+
+    .phone-image-placeholder::after {
+      content: '';
+      position: absolute;
+      bottom: 5%;
+      left: 20%;
+      width: 60%;
+      height: 15%;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 6px;
+    }
+
+    .phone-badge {
+      position: absolute;
+      top: var(--space-md);
+      left: var(--space-md);
+      padding: var(--space-xs) var(--space-sm);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: var(--radius-sm);
+    }
+
+    .phone-badge.new {
+      background: var(--color-success);
+      color: white;
+    }
+
+    .phone-badge.used {
+      background: var(--color-warning);
+      color: white;
+    }
+
+    .phone-badge.refurbished {
+      background: var(--color-info);
+      color: white;
+    }
+
+    .phone-badge.imported {
+      background: var(--color-accent);
+      color: white;
+    }
+
+    .phone-actions {
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all var(--transition-base);
+    }
+
+    .phone-card:hover .phone-actions {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .phone-action-btn {
+      width: 36px;
+      height: 36px;
+      background: white;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      color: var(--color-text-muted);
+      transition: all var(--transition-fast);
+    }
+
+    .phone-action-btn:hover {
+      background: var(--color-accent);
+      color: white;
+    }
+
+    .phone-info {
+      padding: var(--space-lg);
+    }
+
+    .phone-name {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: var(--space-xs);
+    }
+
+    .phone-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-md);
+    }
+
+    .phone-spec {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      background: var(--color-bg-alt);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      color: var(--color-text-muted);
+    }
+
+    .phone-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-md);
+    }
+
+    .phone-price {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--color-dark);
+    }
+
+    .phone-price-original {
+      font-size: 14px;
+      color: var(--color-text-light);
+      text-decoration: line-through;
+      margin-left: var(--space-sm);
+    }
+
+    .phone-stock {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .phone-stock.in-stock {
+      color: var(--color-success);
+    }
+
+    .phone-stock.low-stock {
+      color: var(--color-warning);
+    }
+
+    .phone-stock-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .marketplace-section {
+      background: var(--color-bg-alt);
+    }
+
+    .marketplace-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-3xl);
+      flex-wrap: wrap;
+      margin-top: var(--space-3xl);
+    }
+
+    .marketplace-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md) var(--space-xl);
+      background: white;
+      border-radius: var(--radius-lg);
+      font-weight: 600;
+      color: var(--color-text-muted);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      text-align: center;
+      transition: all var(--transition-base);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    }
+
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--color-accent-light);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-lg);
+      color: var(--color-accent);
+    }
+
+    .feature-card:nth-child(2) .feature-icon {
+      background: var(--color-success-light);
+      color: var(--color-success);
+    }
+
+    .feature-card:nth-child(3) .feature-icon {
+      background: var(--color-warning-light);
+      color: var(--color-warning);
+    }
+
+    .feature-card:nth-child(4) .feature-icon {
+      background: var(--color-info-light);
+      color: var(--color-info);
+    }
+
+    .feature-card:nth-child(5) .feature-icon {
+      background: #F3E8FF;
+      color: #9333EA;
+    }
+
+    .feature-card:nth-child(6) .feature-icon {
+      background: #FCE7F3;
+      color: #DB2777;
+    }
+
+    .feature-card:nth-child(7) .feature-icon {
+      background: #CFFAFE;
+      color: #0891B2;
+    }
+
+    .feature-card:nth-child(8) .feature-icon {
+      background: #ECFCCB;
+      color: #65A30D;
+    }
+
+    .feature-card h4 {
+      font-size: 18px;
+      margin-bottom: var(--space-sm);
+    }
+
+    .feature-card p {
+      color: var(--color-text-muted);
+      font-size: 14px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-lg);
+      position: relative;
+    }
+
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 48px;
+      left: 15%;
+      right: 15%;
+      height: 2px;
+      background: var(--color-border);
+    }
+
+    .step-card {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 96px;
+      height: 96px;
+      background: white;
+      border: 3px solid var(--color-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-lg);
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--color-accent);
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-card h4 {
+      margin-bottom: var(--space-sm);
+    }
+
+    .step-card p {
+      color: var(--color-text-muted);
+      font-size: 14px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+
+    .comparison-header {
+      display: grid;
+      grid-template-columns: 2fr repeat(4, 1fr);
+      gap: 1px;
+      background: var(--color-border);
+    }
+
+    .comparison-header-cell {
+      background: var(--color-bg-alt);
+      padding: var(--space-lg);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .comparison-header-cell:first-child {
+      text-align: left;
+    }
+
+    .comparison-row {
+      display: grid;
+      grid-template-columns: 2fr repeat(4, 1fr);
+      gap: 1px;
+      background: var(--color-border);
+    }
+
+    .comparison-cell {
+      background: white;
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      align-items: center;
+    }
+
+    .comparison-cell:first-child {
+      font-weight: 500;
+      color: var(--color-text-muted);
+    }
+
+    .comparison-cell:not(:first-child) {
+      justify-content: center;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .comparison-check {
+      color: var(--color-success);
+    }
+
+    .comparison-cross {
+      color: var(--color-error);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .testimonial-card {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: var(--space-md);
+      color: var(--color-warning);
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: var(--space-lg);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      background: var(--color-bg-alt);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+    }
+
+    .testimonial-role {
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+
+    .trust-section {
+      background: var(--color-bg-dark);
+      color: white;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--space-xl);
+      text-align: center;
+    }
+
+    .trust-item {
+      padding: var(--space-lg);
+    }
+
+    .trust-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-md);
+      color: var(--color-success);
+    }
+
+    .trust-value {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: var(--space-xs);
+    }
+
+    .trust-label {
+      font-size: 14px;
+      color: var(--color-text-light);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: var(--space-lg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .faq-question:hover {
+      color: var(--color-accent);
+    }
+
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--color-bg-alt);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-base);
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-icon {
+      background: var(--color-accent);
+      color: white;
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-base);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer-content {
+      padding: 0 var(--space-lg) var(--space-lg);
+      color: var(--color-text-muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .blog-card {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      transition: all var(--transition-base);
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-border) 100%);
+    }
+
+    .blog-content {
+      padding: var(--space-lg);
+    }
+
+    .blog-category {
+      display: inline-block;
+      padding: var(--space-xs) var(--space-sm);
+      background: var(--color-accent-light);
+      color: var(--color-accent);
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-sm);
+    }
+
+    .blog-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+      line-height: 1.4;
+    }
+
+    .blog-excerpt {
+      color: var(--color-text-muted);
+      font-size: 14px;
+      margin-bottom: var(--space-md);
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-accent) 0%, #8B5CF6 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      color: white;
+      margin-bottom: var(--space-md);
+    }
+
+    .cta-section p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: var(--space-xl);
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    .cta-section .btn-primary {
+      background: white;
+      color: var(--color-accent);
+    }
+
+    .cta-section .btn-primary:hover {
+      background: var(--color-bg);
+      transform: translateY(-2px);
+    }
+
+    .cta-section .btn-outline {
+      border-color: white;
+      color: white;
+    }
+
+    .cta-section .btn-outline:hover {
+      background: white;
+      color: var(--color-accent);
+    }
+
+    .footer {
+      background: var(--color-bg-dark);
+      color: white;
+      padding: var(--space-4xl) 0 var(--space-xl);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: var(--space-3xl);
+      margin-bottom: var(--space-4xl);
+    }
+
+    .footer-brand {
+      max-width: 320px;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+
+    .footer-logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--color-accent) 0%, #8B5CF6 100%);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-description {
+      color: var(--color-text-light);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: var(--space-lg);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: var(--space-sm);
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all var(--transition-fast);
+    }
+
+    .footer-social a:hover {
+      background: var(--color-accent);
+      transform: translateY(-2px);
+    }
+
+    .footer-column h4 {
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: var(--space-lg);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-links a {
+      color: var(--color-text-light);
+      font-size: 14px;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding-top: var(--space-xl);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: var(--color-text-light);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: var(--space-lg);
+    }
+
+    .footer-legal a:hover {
+      color: white;
+    }
+
+    .newsletter-box {
+      background: var(--color-bg-alt);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .newsletter-box h3 {
+      margin-bottom: var(--space-sm);
+    }
+
+    .newsletter-box p {
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-lg);
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: var(--space-sm);
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: var(--space-md) var(--space-lg);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-family: var(--font-body);
+      font-size: 15px;
+    }
+
+    .newsletter-form input:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--transition-base);
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      max-width: 450px;
+      width: 90%;
+      transform: scale(0.9);
+      transition: all var(--transition-base);
+      position: relative;
+    }
+
+    .modal-backdrop.active .modal {
+      transform: scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-full);
+      background: var(--color-bg-alt);
+      color: var(--color-text-muted);
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-1 {
+      transition-delay: 0.1s;
+    }
+
+    .stagger-2 {
+      transition-delay: 0.15s;
+    }
+
+    .stagger-3 {
+      transition-delay: 0.2s;
+    }
+
+    .stagger-4 {
+      transition-delay: 0.25s;
+    }
+
+    .stagger-5 {
+      transition-delay: 0.3s;
+    }
+
+    .stagger-6 {
+      transition-delay: 0.35s;
+    }
+
+    .stagger-7 {
+      transition-delay: 0.4s;
+    }
+
+    .stagger-8 {
+      transition-delay: 0.45s;
+    }
+
+    @media (max-width: 1200px) {
+      .phones-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2xl);
+      }
+
+      .steps-grid::before {
+        display: none;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-phones {
+        max-width: 600px;
+        margin: var(--space-3xl) auto 0;
+      }
+
+      .phones-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .phones-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .features-grid,
+      .steps-grid,
+      .testimonials-grid,
+      .faq-grid,
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-brand {
+        max-width: none;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: var(--space-lg);
+      }
+
+      .hero-stat-item {
+        text-align: center;
+      }
+
+      .comparison-table {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon"><i data-lucide="smartphone"></i></div>
+        PhoneVault
+      </a>
+      <ul class="nav-links">
+        <li><a href="#phones" class="nav-link">Phones</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#warranty" class="nav-link">Warranty</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+        <button class="nav-icon-btn" aria-label="Cart"><i data-lucide="shopping-cart"></i></button>
+        <a href="#phones" class="nav-cta">Browse Phones</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <div class="hero-badge"><span class="hero-badge-dot"></span> Premium Quality Guaranteed</div>
+          <h1 class="hero-title"><span>Discover Your</span><span class="text-gradient">Perfect Phone</span></h1>
+          <p class="hero-description">We import premium smartphones from trusted global marketplaces. Every device is
+            inspected, certified, and backed by our comprehensive warranty. Shop with confidence for New, Used, and
+            Refurbished phones.</p>
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <div class="hero-stat-value">15,000+</div>
+              <div class="hero-stat-label">Happy Customers</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-value">2,500+</div>
+              <div class="hero-stat-label">Phones in Stock</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-value">98.5%</div>
+              <div class="hero-stat-label">Satisfaction Rate</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-value">50+</div>
+              <div class="hero-stat-label">Global Marketplaces</div>
+            </div>
+          </div>
+          <div class="hero-buttons">
+            <a href="#phones" class="btn btn-primary btn-lg"><i data-lucide="smartphone"></i> Shop Now</a>
+            <a href="#how-it-works" class="btn btn-outline btn-lg">How It Works</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-phones">
+            <div class="hero-phone-card">
+              <div class="hero-phone-image"></div>
+              <div class="hero-phone-name">iPhone 15 Pro Max</div>
+              <div class="hero-phone-price">From $1,099</div>
+            </div>
+            <div class="hero-phone-card">
+              <div class="hero-phone-image" style="background: linear-gradient(135deg, #1E293B 0%, #475569 100%);">
+              </div>
+              <div class="hero-phone-name">Samsung S24 Ultra</div>
+              <div class="hero-phone-price">From $1,299</div>
+            </div>
+            <div class="hero-phone-card">
+              <div class="hero-phone-image" style="background: linear-gradient(135deg, #334155 0%, #64748B 100%);">
+              </div>
+              <div class="hero-phone-name">Google Pixel 9 Pro</div>
+              <div class="hero-phone-price">From $999</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <div class="container">
+      <div class="search-box">
+        <i data-lucide="search" class="search-icon" style="width:24px;height:24px;"></i>
+        <input type="text" class="search-input" placeholder="Search for iPhone, Samsung, Google Pixel, and more...">
+      </div>
+      <div class="search-filters">
+        <span class="search-filter">iPhone 15 Series</span>
+        <span class="search-filter">Samsung Galaxy S24</span>
+        <span class="search-filter">Google Pixel</span>
+        <span class="search-filter">OnePlus</span>
+        <span class="search-filter">Xiaomi</span>
+        <span class="search-filter">Refurbished</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="category-tabs">
+        <button class="category-tab active"><i data-lucide="sparkles" class="category-tab-icon"></i> All Phones</button>
+        <button class="category-tab"><i data-lucide="package" class="category-tab-icon"></i> New</button>
+        <button class="category-tab"><i data-lucide="refresh-ccw" class="category-tab-icon"></i> Refurbished</button>
+        <button class="category-tab"><i data-lucide="smartphone" class="category-tab-icon"></i> Used</button>
+        <button class="category-tab"><i data-lucide="globe" class="category-tab-icon"></i> Imported</button>
+      </div>
+
+      <div class="section-header">
+        <h2>Featured Phones</h2>
+        <p>Handpicked premium devices from the world's leading marketplaces</p>
+      </div class="phones-grid>
+
+      <div">
+      <div class="phone-card">
+        <div class="phone-image">
+          <span class="phone-badge new">New</span>
+          <div class="phone-image-placeholder"></div>
+          <div class="phone-actions">
+            <button class="phone-action-btn" aria-label="Wishlist"><i data-lucide="heart"
+                style="width:16px;height:16px;"></i></button>
+            <button class="phone-action-btn" aria-label="Compare"><i data-lucide="git-compare"
+                style="width:16px;height:16px;"></i></button>
+          </div>
+        </div>
+        <div class="phone-info">
+          <h4 class="phone-name">iPhone 15 Pro Max 256GB</h4>
+          <div class="phone-specs">
+            <span class="phone-spec"><i data-lucide="cpu" style="width:12px;height:12px;"></i> A17 Pro</span>
+            <span class="phone-spec"><i data-lucide="memory-stick" style="width:12px;height:12px;"></i> 8GB RAM</span>
+            <span class="phone-spec"><i data-lucide="battery" style="width:12px;height:12px;"></i> 4422mAh</span>
+          </div>
+          <div class="phone-price-row">
+            <div><span class="phone-price">$1,199</span><span class="phone-price-original">$1,299</span></div>
+            <span class="phone-stock in-stock"><span class="phone-stock-dot"></span> In Stock</span>
+          </div>
+          <button class="btn btn-primary" onclick="openModal('iPhone 15 Pro Max')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">
+          <span class="phone-badge refurbished">Refurbished</span>
+          <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #1E293B 0%, #334155 100%);">
+          </div>
+          <div class="phone-actions">
+            <button class="phone-action-btn" aria-label="Wishlist"><i data-lucide="heart"
+                style="width:16px;height:16px;"></i></button>
+            <button class="phone-action-btn" aria-label="Compare"><i data-lucide="git-compare"
+                style="width:16px;height:16px;"></i></button>
+          </div>
+        </div>
+        <div class="phone-info">
+          <h4 class="phone-name">Samsung Galaxy S24 Ultra 512GB</h4>
+          <div class="phone-specs">
+            <span class="phone-spec"><i data-lucide="cpu" style="width:12px;height:12px;"></i> SD 8 Gen 3</span>
+            <span class="phone-spec"><i data-lucide="memory-stick" style="width:12px;height:12px;"></i> 12GB RAM</span>
+            <span class="phone-spec"><i data-lucide="battery" style="width:12px;height:12px;"></i> 5000mAh</span>
+          </div>
+          <div class="phone-price-row">
+            <div><span class="phone-price">$999</span><span class="phone-price-original">$1,399</span></div>
+            <span class="phone-stock in-stock"><span class="phone-stock-dot"></span> In Stock</span>
+          </div>
+          <button class="btn btn-primary" onclick="openModal('Samsung Galaxy S24 Ultra')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">
+          <span class="phone-badge imported">Imported</span>
+          <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #374151 0%, #1F2937 100%);">
+          </div>
+          <div class="phone-actions">
+            <button class="phone-action-btn" aria-label="Wishlist"><i data-lucide="heart"
+                style="width:16px;height:16px;"></i></button>
+            <button class="phone-action-btn" aria-label="Compare"><i data-lucide="git-compare"
+                style="width:16px;height:16px;"></i></button>
+          </div>
+        </div>
+        <div class="phone-info">
+          <h4 class="phone-name">Google Pixel 9 Pro 256GB</h4>
+          <div class="phone-specs">
+            <span class="phone-spec"><i data-lucide="cpu" style="width:12px;height:12px;"></i> Tensor G4</span>
+            <span class="phone-spec"><i data-lucide="memory-stick" style="width:12px;height:12px;"></i> 16GB RAM</span>
+            <span class="phone-spec"><i data-lucide="camera" style="width:12px;height:12px;"></i> 50MP</span>
+          </div>
+          <div class="phone-price-row">
+            <div><span class="phone-price">$949</span><span class="phone-price-original">$1,099</span></div>
+            <span class="phone-stock low-stock"><span class="phone-stock-dot"></span> Only 3 Left</span>
+          </div>
+          <button class="btn btn-primary" onclick="openModal('Google Pixel 9 Pro')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">
+          <span class="phone-badge used">Used</span>
+          <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #2D3748 0%, #1A202C 100%);">
+          </div>
+          <div class="phone-actions">
+            <button class="phone-action-btn" aria-label="Wishlist"><i data-lucide="heart"
+                style="width:16px;height:16px;"></i></button>
+            <button class="phone-action-btn" aria-label="Compare"><i data-lucide="git-compare"
+                style="width:16px;height:16px;"></i></button>
+          </div>
+        </div>
+        <div class="phone-info">
+          <h4 class="phone-name">iPhone 14 Pro 128GB - Excellent</h4>
+          <div class="phone-specs">
+            <span class="phone-spec"><i data-lucide="cpu" style="width:12px;height:12px;"></i> A16 Bionic</span>
+            <span class="phone-spec"><i data-lucide="memory-stick" style="width:12px;height:12px;"></i> 6GB RAM</span>
+            <span class="phone-spec"><i data-lucide="battery" style="width:12px;height:12px;"></i> 3200mAh</span>
+          </div>
+          <div class="phone-price-row">
+            <div><span class="phone-price">$649</span><span class="phone-price-original">$999</span></div>
+            <span class="phone-stock in-stock"><span class="phone-stock-dot"></span> In Stock</span>
+          </div>
+          <button class="btn btn-primary" onclick="openModal('iPhone 14 Pro')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">
+          <span class="phone-badge new">New</span>
+          <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #1E293B 0%, #0F172A 100%);">
+          </div>
+          <div class="phone-actions">
+            <button class="phone-action-btn" aria-label="Wishlist"><i data-lucide="heart"
+                style="width:16px;height:16px;"></i></button>
+            <button class="phone-action-btn" aria-label="Compare"><i data-lucide="git-compare"
+                style="width:16px;height:16px;"></i></button>
+          </div>
+        </div>
+        <div class="phone-info">
+          <h4 class="phone-name">Samsung Galaxy Z Fold 5 512GB</h4>
+          <div class="phone-specs">
+            <span class="phone-spec"><i data-lucide="cpu" style="width:12px;height:12px;"></i> SD 8 Gen 2</span>
+            <span class="phone-spec"><i data-lucide="memory-stick" style="width:12px;height:12px;"></i> 12GB RAM</span>
+            <span class="phone-spec"><i data-lucide="smartphone" style="width:12px;height:12px;"></i> Foldable</span>
+          </div>
+          <div class="phone-price-row">
+            <div><span class="phone-price">$1,599</span><span class="phone-price-original">$1,799</span></div>
+            <span class="phone-stock in-stock"><span class="phone-stock-dot"></span> In Stock</span>
+          </div>
+          <button class="btn btn-primary" onclick="openModal('Samsung Galaxy Z Fold 5')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">
+          <span class="phone-badge refurbished">Refurbished</span>
+          <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #374151 0%, #111827 100%);">
+          </div>
+          <div class="phone-actions">
+            <button class="phone-action-btn" aria-label="Wishlist"><i data-lucide="heart"
+                style="width:16px;height:16px;"></i></button>
+            <button class="phone-action-btn" aria-label="Compare"><i data-lucide="git-compare"
+                style="width:16px;height:16px;"></i></button>
+          </div>
+        </div>
+        <div class="phone-info">
+          <h4 class="phone-name">OnePlus 12 256GB</h4>
+          <div class="phone-specs">
+            <span class="phone-spec"><i data-lucide="cpu" style="width:12px;height:12px;"></i> SD 8 Gen 3</span>
+            <span class="phone-spec"><i data-lucide="memory-stick" style="width:12px;height:12px;"></i> 12GB RAM</span>
+            <span class="phone-spec"><i data-lucide="battery" style="width:12px;height:12px;"></i> 5400mAh</span>
+          </div>
+          <div class="phone-price-row">
+            <div><span class="phone-price">$699</span><span class="phone-price-original">$899</span></div>
+            <span class="phone-stock in-stock"><span class="phone-stock-dot"></span> In Stock</span>
+          </div>
+          <button class="btn btn-primary" onclick="openModal('OnePlus 12')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">
+          <span class="phone-badge imported">Imported</span>
+          <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #1F2937 0%, #111827 100%);">
+          </div>
+          <div class="phone-actions">
+            <button class="phone-action-btn" aria-label="Wishlist"><i data-lucide="heart"
+                style="width:16px;height:16px;"></i></button>
+            <button class="phone-action-btn" aria-label="Compare"><i data-lucide="git-compare"
+                style="width:16px;height:16px;"></i></button>
+          </div>
+        </div>
+        <div class="phone-info">
+          <h4 class="phone-name">Xiaomi 14 Ultra 512GB</h4>
+          <div class="phone-specs">
+            <span class="phone-spec"><i data-lucide="cpu" style="width:12px;height:12px;"></i> SD 8 Gen 3</span>
+            <span class="phone-spec"><i data-lucide="memory-stick" style="width:12px;height:12px;"></i> 16GB RAM</span>
+            <span class="phone-spec"><i data-lucide="camera" style="width:12px;height:12px;"></i> 50MP Quad</span>
+          </div>
+          <div class="phone-price-row">
+            <div><span class="phone-price">$1,199</span><span class="phone-price-original">$1,499</span></div>
+            <span class="phone-stock low-stock"><span class="phone-stock-dot"></span> Only 2 Left</span>
+          </div>
+          <button class="btn btn-primary" onclick="openModal('Xiaomi 14 Ultra')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">
+          <span class="phone-badge used">Used</span>
+          <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #2D3748 0%, #1A202C 100%);">
+          </div>
+          <div class="phone-actions">
+            <button class="phone-action-btn" aria-label="Wishlist"><i data-lucide="heart"
+                style="width:16px;height:16px;"></i></button>
+            <button class="phone-action-btn" aria-label="Compare"><i data-lucide="git-compare"
+                style="width:16px;height:16px;"></i></button>
+          </div>
+        </div>
+        <div class="phone-info">
+          <h4 class="phone-name">iPhone 13 128GB - Good</h4>
+          <div class="phone-specs">
+            <span class="phone-spec"><i data-lucide="cpu" style="width:12px;height:12px;"></i> A15 Bionic</span>
+            <span class="phone-spec"><i data-lucide="memory-stick" style="width:12px;height:12px;"></i> 4GB RAM</span>
+            <span class="phone-spec"><i data-lucide="battery" style="width:12px;height:12px;"></i> 3227mAh</span>
+          </div>
+          <div class="phone-price-row">
+            <div><span class="phone-price">$349</span><span class="phone-price-original">$599</span></div>
+            <span class="phone-stock in-stock"><span class="phone-stock-dot"></span> In Stock</span>
+          </div>
+          <button class="btn btn-primary" onclick="openModal('iPhone 13')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-top: var(--space-3xl);">
+      <a href="#phones" class="btn btn-outline btn-lg">View All Phones <i data-lucide="arrow-right"></i></a>
+    </div>
+    </div>
+  </section>
+
+  <section class="section marketplace-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>We Source From Trusted Global Marketplaces</h2>
+        <p>Our extensive network ensures authentic, quality devices at competitive prices</p>
+      </div>
+      <div class="marketplace-logos">
+        <div class="marketplace-logo">
+          <div class="marketplace-logo-icon"><i data-lucide="globe" style="width:16px;height:16px;"></i></div>Amazon
+          Global
+        </div>
+        <div class="marketplace-logo">
+          <div class="marketplace-logo-icon"><i data-lucide="shopping-bag" style="width:16px;height:16px;"></i></div>
+          eBay Verified
+        </div>
+        <div class="marketplace-logo">
+          <div class="marketplace-logo-icon"><i data-lucide="store" style="width:16px;height:16px;"></i></div>Best Buy
+        </div>
+        <div class="marketplace-logo">
+          <div class="marketplace-logo-icon"><i data-lucide="smartphone" style="width:16px;height:16px;"></i></div>Apple
+          Authorized
+        </div>
+        <div class="marketplace-logo">
+          <div class="marketplace-logo-icon"><i data-lucide="factory" style="width:16px;height:16px;"></i></div>Samsung
+          Official
+        </div>
+        <div class="marketplace-logo">
+          <div class="marketplace-logo-icon"><i data-lucide="plane" style="width:16px;height:16px;"></i></div>Japan
+          Auction
+        </div>
+        <div class="marketplace-logo">
+          <div class="marketplace-logo-icon"><i data-lucide="landmark" style="width:16px;height:16px;"></i></div>Korea
+          Direct
+        </div>
+        <div class="marketplace-logo">
+          <div class="marketplace-logo-icon"><i data-lucide="shield-check" style="width:16px;height:16px;"></i></div>
+          Trade-In Programs
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="warranty">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose PhoneVault?</h2>
+        <p>We're committed to providing the best shopping experience</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll stagger-1">
+          <div class="feature-icon"><i data-lucide="shield-check" style="width:28px;height:28px;"></i></div>
+          <h4>1-Year Warranty</h4>
+          <p>Every phone comes with a comprehensive 12-month warranty covering hardware defects and malfunctions.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-2">
+          <div class="feature-icon"><i data-lucide="search" style="width:28px;height:28px;"></i></div>
+          <h4>30-Point Inspection</h4>
+          <p>Refurbished phones undergo rigorous testing including display, battery, camera, speaker, and connectivity.
+          </p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-3">
+          <div class="feature-icon"><i data-lucide="rotate-ccw" style="width:28px;height:28px;"></i></div>
+          <h4>30-Day Returns</h4>
+          <p>Not satisfied? Return any phone within 30 days for a full refund or exchange. No questions asked.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-4">
+          <div class="feature-icon"><i data-lucide="battery-charging" style="width:28px;height:28px;"></i></div>
+          <h4>Authentic Batteries</h4>
+          <p>All batteries are genuine Apple or Samsung originals with guaranteed capacity above 85% for refurbished.
+          </p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-5">
+          <div class="feature-icon"><i data-lucide="lock" style="width:28px;height:28px;"></i></div>
+          <h4>Factory Unlocked</h4>
+          <p>All phones are factory unlocked, compatible with any carrier worldwide. No contracts or restrictions.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-6">
+          <div class="feature-icon"><i data-lucide="truck" style="width:28px;height:28px;"></i></div>
+          <h4>Free Express Shipping</h4>
+          <p>Free next-day delivery on orders over $500. Fully insured shipping with tracking included.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-7">
+          <div class="feature-icon"><i data-lucide="credit-card" style="width:28px;height:28px;"></i></div>
+          <h4>Flexible Payments</h4>
+          <p>Buy now, pay later options available through Klarna, Affirm, and Apple Pay. Interest-free for qualified
+            buyers.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-8">
+          <div class="feature-icon"><i data-lucide="headphones" style="width:28px;height:28px;"></i></div>
+          <h4>24/7 Support</h4>
+          <p>Dedicated customer support team available round the clock via chat, phone, or email for any assistance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Simple, transparent process from selection to delivery</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card animate-on-scroll stagger-1">
+          <div class="step-number">1</div>
+          <h4>Browse & Select</h4>
+          <p>Explore our extensive collection of new, used, and refurbished phones from top brands. Filter by price,
+            condition, storage, and more.</p>
+        </div>
+        <div class="step-card animate-on-scroll stagger-2">
+          <div class="step-number">2</div>
+          <h4>Verify Quality</h4>
+          <p>Each phone includes detailed specifications, condition rating, and genuine photos. Our 30-point inspection
+            report is available for every device.</p>
+        </div>
+        <div class="step-card animate-on-scroll stagger-3">
+          <div class="step-number">3</div>
+          <h4>Secure Checkout</h4>
+          <p>Complete your purchase securely with encrypted payment processing. Multiple payment options including
+            installment plans available.</p>
+        </div>
+        <div class="step-card animate-on-scroll stagger-4">
+          <div class="step-number">4</div>
+          <h4>Fast Delivery</h4>
+          <p>Receive your phone in pristine condition with free express shipping. Fully insured with real-time tracking
+            updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Compare Phone Conditions</h2>
+        <p>Understanding the difference between new, used, and refurbished</p>
+      </div>
+      <div class="comparison-table">
+        <div class="comparison-header">
+          <div class="comparison-header-cell">Features</div>
+          <div class="comparison-header-cell">Brand New</div>
+          <div class="comparison-header-cell">Refurbished</div>
+          <div class="comparison-header-cell">Used - Excellent</div>
+          <div class="comparison-header-cell">Used - Good</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-cell">Warranty</div>
+          <div class="comparison-cell">1 Year Manufacturer</div>
+          <div class="comparison-cell">1 Year PhoneVault</div>
+          <div class="comparison-cell">6 Months PhoneVault</div>
+          <div class="comparison-cell">3 Months PhoneVault</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-cell">Battery Health</div>
+          <div class="comparison-cell">100%</div>
+          <div class="comparison-cell">85%+</div>
+          <div class="comparison-cell">80%+</div>
+          <div class="comparison-cell">75%+</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-cell">Original Packaging</div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="x" class="comparison-cross"></i></div>
+          <div class="comparison-cell"><i data-lucide="x" class="comparison-cross"></i></div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-cell">New Accessories</div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="x" class="comparison-cross"></i></div>
+          <div class="comparison-cell"><i data-lucide="x" class="comparison-cross"></i></div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-cell">Inspector Certified</div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-cell">30-Day Returns</div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+          <div class="comparison-cell"><i data-lucide="check" class="comparison-check"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+        <p>Join thousands of satisfied customers worldwide</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+          </div>
+          <p class="testimonial-text">"Absolutely thrilled with my purchase! The iPhone 15 Pro Max I bought was in
+            pristine condition, exactly as described. The 30-point inspection gave me confidence in the quality. Fast
+            shipping too!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JD</div>
+            <div>
+              <div class="testimonial-name">James Davidson</div>
+              <div class="testimonial-role">Verified Buyer • Nairobi, KE</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+          </div>
+          <p class="testimonial-text">"Best place to buy refurbished phones! Got a Samsung Galaxy S24 Ultra at an
+            amazing price. The battery health was 92% and the phone looks brand new. Customer service was exceptional."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div>
+              <div class="testimonial-name">Sarah Mitchell</div>
+              <div class="testimonial-role">Verified Buyer • New York, NY</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+          </div>
+          <p class="testimonial-text">"Imported Pixel 9 Pro from Japan - couldn't be happier! Authentic device, original
+            packaging, and significant savings compared to local stores. PhoneVault made the whole process seamless."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RC</div>
+            <div>
+              <div class="testimonial-name">Robert Chen</div>
+              <div class="testimonial-role">Verified Buyer • Seattle, WA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+          </div>
+          <p class="testimonial-text">"Third time buying from PhoneVault and they never disappoint. My entire family now
+            uses phones from here. The warranty support is top-notch and they honor their promises."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LP</div>
+            <div>
+              <div class="testimonial-name">Linda Patterson</div>
+              <div class="testimonial-role">Verified Buyer • Chicago, IL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+          </div>
+          <p class="testimonial-text">"Sold my old iPhone 13 through their trade-in program - got a great value and
+            applied it to my new iPhone 15. The whole upgrade process was incredibly smooth!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MT</div>
+            <div>
+              <div class="testimonial-name">Michael Torres</div>
+              <div class="testimonial-role">Verified Buyer • Miami, FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+            <i data-lucide="star" style="width:16px;height:16px;fill:var(--color-warning);"></i>
+          </div>
+          <p class="testimonial-text">"Was skeptical about buying used, but PhoneVault changed my mind. The 'Excellent'
+            condition iPhone 14 Pro I bought looked untouched. Saved $300 and got a better deal than anywhere else."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div>
+              <div class="testimonial-name">Amanda Kim</div>
+              <div class="testimonial-role">Verified Buyer • San Francisco, CA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Stats Section -->
+  <section class="section section-dark trust-section">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item animate-on-scroll">
+          <div class="trust-icon"><i data-lucide="shield-check" style="width:28px;height:28px;"></i></div>
+          <div class="trust-value">15,000+</div>
+          <div class="trust-label">Happy Customers</div>
+        </div>
+        <div class="trust-item animate-on-scroll">
+          <div class="trust-icon"><i data-lucide="award" style="width:28px;height:28px;"></i></div>
+          <div class="trust-value">98.5%</div>
+          <div class="trust-label">Satisfaction Rate</div>
+        </div>
+        <div class="trust-item animate-on-scroll">
+          <div class="trust-icon"><i data-lucide="smartphone" style="width:28px;height:28px;"></i></div>
+          <div class="trust-value">2,500+</div>
+          <div class="trust-label">Phones Sold Monthly</div>
+        </div>
+        <div class="trust-item animate-on-scroll">
+          <div class="trust-icon"><i data-lucide="globe" style="width:28px;height:28px;"></i></div>
+          <div class="trust-value">50+</div>
+          <div class="trust-label">Global Marketplaces</div>
+        </div>
+        <div class="trust-item animate-on-scroll">
+          <div class="trust-icon"><i data-lucide="clock" style="width:28px;height:28px;"></i></div>
+          <div class="trust-value">24/7</div>
+          <div class="trust-label">Customer Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phone Brands Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Popular Brands</h2>
+        <p>Find your perfect phone from top manufacturers worldwide</p>
+      </div>
+      <div class="phones-grid" style="grid-template-columns: repeat(6, 1fr);">
+        <div class="feature-card" style="cursor:pointer;">
+          <div style="font-size:32px;margin-bottom:var(--space-sm);">🍎</div>
+          <h4 style="font-size:16px;">Apple</h4>
+          <p style="font-size:12px;">iPhone 15, 14, 13 Series</p>
+        </div>
+        <div class="feature-card" style="cursor:pointer;">
+          <div style="font-size:32px;margin-bottom:var(--space-sm);">📱</div>
+          <h4 style="font-size:16px;">Samsung</h4>
+          <p style="font-size:12px;">Galaxy S, Z Fold, A Series</p>
+        </div>
+        <div class="feature-card" style="cursor:pointer;">
+          <div style="font-size:32px;margin-bottom:var(--space-sm);">🔵</div>
+          <h4 style="font-size:16px;">Google</h4>
+          <p style="font-size:12px;">Pixel 9, 8, 7 Series</p>
+        </div>
+        <div class="feature-card" style="cursor:pointer;">
+          <div style="font-size:32px;margin-bottom:var(--space-sm);">➕</div>
+          <h4 style="font-size:16px;">OnePlus</h4>
+          <p style="font-size:12px;">OnePlus 12, 11, Nord</p>
+        </div>
+        <div class="feature-card" style="cursor:pointer;">
+          <div style="font-size:32px;margin-bottom:var(--space-sm);">📲</div>
+          <h4 style="font-size:16px;">Xiaomi</h4>
+          <p style="font-size:12px;">14 Ultra, 14, 13 Pro</p>
+        </div>
+        <div class="feature-card" style="cursor:pointer;">
+          <div style="font-size:32px;margin-bottom:var(--space-sm);">🎯</div>
+          <h4 style="font-size:16px;">Sony</h4>
+          <p style="font-size:12px;">Xperia 1, 5 Series</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trade-In Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Trade-In Your Old Phone</h2>
+        <p>Get instant credit towards your next purchase. Make your old phone work for you.</p>
+      </div>
+      <div class="steps-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">1</div>
+          <h4>Get a Quote</h4>
+          <p>Enter your phone model and condition to get an instant trade-in value. Our AI-powered valuation ensures
+            fair prices.</p>
+        </div>
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">2</div>
+          <h4>Ship Free</h4>
+          <p>Use our prepaid shipping label to send your phone. We'll provide a shipping kit with everything you need.
+          </p>
+        </div>
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">3</div>
+          <h4>Get Paid</h4>
+          <p>Once inspected, receive instant payment via bank transfer, PayPal, or credit towards your new phone
+            purchase.</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: var(--space-3xl);">
+        <a href="#phones" class="btn btn-primary btn-lg">Trade-In Now <i data-lucide="refresh-ccw"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accessories Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Essential Accessories</h2>
+        <p>Complete your purchase with genuine accessories and protection plans</p>
+      </div>
+      <div class="phones-grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="phone-card">
+          <div class="phone-image">
+            <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #374151 0%, #1F2937 100%);">
+            </div>
+          </div>
+          <div class="phone-info">
+            <h4 class="phone-name">MagSafe Case</h4>
+            <div class="phone-specs">
+              <span class="phone-spec">Official</span>
+              <span class="phone-spec">Multiple Colors</span>
+            </div>
+            <div class="phone-price-row">
+              <span class="phone-price">$39</span>
+            </div>
+            <button class="btn btn-outline btn-sm">Add to Cart</button>
+          </div>
+        </div>
+        <div class="phone-card">
+          <div class="phone-image">
+            <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #1E293B 0%, #334155 100%);">
+            </div>
+          </div>
+          <div class="phone-info">
+            <h4 class="phone-name">20W Fast Charger</h4>
+            <div class="phone-specs">
+              <span class="phone-spec">Official</span>
+              <span class="phone-spec">USB-C</span>
+            </div>
+            <div class="phone-price-row">
+              <span class="phone-price">$29</span>
+            </div>
+            <button class="btn btn-outline btn-sm">Add to Cart</button>
+          </div>
+        </div>
+        <div class="phone-card">
+          <div class="phone-image">
+            <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #2D3748 0%, #1A202C 100%);">
+            </div>
+          </div>
+          <div class="phone-info">
+            <h4 class="phone-name">Tempered Glass</h4>
+            <div class="phone-specs">
+              <span class="phone-spec">9H Hardness</span>
+              <span class="phone-spec">Easy Install</span>
+            </div>
+            <div class="phone-price-row">
+              <span class="phone-price">$19</span>
+            </div>
+            <button class="btn btn-outline btn-sm">Add to Cart</button>
+          </div>
+        </div>
+        <div class="phone-card">
+          <div class="phone-image">
+            <div class="phone-image-placeholder" style="background: linear-gradient(145deg, #374151 0%, #111827 100%);">
+            </div>
+          </div>
+          <div class="phone-info">
+            <h4 class="phone-name">Premium Screen Protector</h4>
+            <div class="phone-specs">
+              <span class="phone-spec">Privacy Option</span>
+              <span class="phone-spec">Lifetime Warranty</span>
+            </div>
+            <div class="phone-price-row">
+              <span class="phone-price">$49</span>
+            </div>
+            <button class="btn btn-outline btn-sm">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: var(--space-2xl);">
+        <a href="#phones" class="btn btn-outline">View All Accessories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about buying phones from PhoneVault</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            Are all phones authentic?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">Yes, absolutely. Every phone we sell goes through our rigorous 30-point
+              inspection process. We source only from authorized marketplaces and verified sellers. All phones come with
+              original serial numbers and genuine components. We provide authenticity certificates for every device.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            What's the difference between new, used, and refurbished?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">New phones are brand new, unopened devices with full manufacturer warranty.
+              Used phones are pre-owned devices in good working condition, sold as-is. Refurbished phones are
+              professionally restored to like-new condition, with all parts tested and replaced if needed, backed by our
+              warranty.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            Do phones come with a warranty?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">Yes! New phones include the original manufacturer warranty. Refurbished
+              phones come with our comprehensive 1-year PhoneVault warranty. Used phones in excellent condition include
+              6 months warranty, while good condition used phones include 3 months warranty.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            How long does shipping take?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">Standard shipping takes 3-5 business days. Express shipping (1-2 days) is
+              available for $9.99. Free express shipping is included on all orders over $500. All shipments are fully
+              insured and include tracking.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            Can I return my phone?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">We offer a 30-day return policy for all phones. If you're not completely
+              satisfied, return the device in original condition with all accessories for a full refund. Return shipping
+              is free for defective items.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            Are phones carrier unlocked?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">Yes, all phones we sell are factory unlocked and compatible with any carrier
+              worldwide. They work with AT&T, Verizon, T-Mobile, and all other GSM and CDMA networks. No contracts or
+              carrier restrictions.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            How do you ensure battery health?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">All refurbished and used phones have their batteries tested. We guarantee
+              minimum 85% battery health for refurbished devices, 80% for excellent condition used, and 75% for good
+              condition. New phones come with 100% battery health.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            What payment methods do you accept?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">We accept all major credit cards (Visa, MasterCard, American Express),
+              PayPal, Apple Pay, and Google Pay. We also offer flexible financing through Klarna and Affirm with 0% APR
+              for qualified buyers.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            Do you ship internationally?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">Yes! We ship to over 100 countries worldwide. International shipping rates
+              and delivery times vary by location. Import duties and taxes may apply and are the responsibility of the
+              buyer.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            How does the trade-in process work?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">Get an instant quote on our website, ship your phone using our prepaid
+              label, and receive payment within 24 hours of inspection. Trade-in credit can be applied to your new
+              purchase or paid out via bank transfer or PayPal.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            What if my phone arrives damaged?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">All shipments are fully insured. If your phone arrives damaged, contact us
+              immediately with photos. We'll arrange a free replacement or full refund. Our priority is ensuring you
+              receive your phone in perfect condition.</div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question">
+            How can I track my order?
+            <span class="faq-icon"><i data-lucide="chevron-down" style="width:18px;height:18px;"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">Once your order ships, you'll receive an email with tracking information.
+              You can also track your order in real-time through your account dashboard. We'll send SMS updates for
+              major delivery milestones.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="section" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest from Our Blog</h2>
+        <p>Tips, guides, and news about smartphones</p>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-image" style="background: linear-gradient(135deg, #EEF2FF 0%, #C7D2FE 100%);"></div>
+          <div class="blog-content">
+            <span class="blog-category">Guide</span>
+            <h4 class="blog-title">iPhone 15 Pro Max vs Samsung S24 Ultra: Which Should You Buy?</h4>
+            <p class="blog-excerpt">A comprehensive comparison of the two flagship smartphones to help you make the
+              right choice.</p>
+            <div class="blog-meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;"></i> Jan 15, 2025</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;"></i> 8 min read</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-image" style="background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);"></div>
+          <div class="blog-content">
+            <span class="blog-category">Tips</span>
+            <h4 class="blog-title">How to Choose the Right Refurbished Phone</h4>
+            <p class="blog-excerpt">Everything you need to know about buying refurbished: what to look for, red flags to
+              avoid, and money-saving tips.</p>
+            <div class="blog-meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;"></i> Jan 12, 2025</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;"></i> 6 min read</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-image" style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);"></div>
+          <div class="blog-content">
+            <span class="blog-category">News</span>
+            <h4 class="blog-title">Best Phone Deals in January 2025</h4>
+            <p class="blog-excerpt">Our curated list of the best smartphone deals this month across all categories and
+              budgets.</p>
+            <div class="blog-meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;"></i> Jan 10, 2025</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;"></i> 5 min read</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-image" style="background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);"></div>
+          <div class="blog-content">
+            <span class="blog-category">Guide</span>
+            <h4 class="blog-title">Understanding Phone Condition Grades</h4>
+            <p class="blog-excerpt">What do Excellent, Good, and Fair condition really mean? A complete guide to
+              understanding phone grades.</p>
+            <div class="blog-meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;"></i> Jan 8, 2025</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;"></i> 7 min read</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-image" style="background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%);"></div>
+          <div class="blog-content">
+            <span class="blog-category">Tips</span>
+            <h4 class="blog-title">How to Maximize Your Trade-In Value</h4>
+            <p class="blog-excerpt">Pro tips to get the most money for your old phone when trading in or selling.</p>
+            <div class="blog-meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;"></i> Jan 5, 2025</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;"></i> 4 min read</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-image" style="background: linear-gradient(135deg, #F3E8FF 0%, #DDD6FE 100%);"></div>
+          <div class="blog-content">
+            <span class="blog-category">News</span>
+            <h4 class="blog-title">Why Imported Phones Are Getting Popular</h4>
+            <p class="blog-excerpt">Exploring the trend of importing phones from international markets and the benefits
+              it offers.</p>
+            <div class="blog-meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;"></i> Jan 3, 2025</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;"></i> 6 min read</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section">
+    <div class="container">
+      <div class="newsletter-box">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to get exclusive deals, new arrivals, and expert buying guides delivered to your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2>Ready to Find Your Perfect Phone?</h2>
+      <p>Browse our extensive collection of new, used, and refurbished phones from top brands worldwide.</p>
+      <div class="cta-buttons">
+        <a href="#phones" class="btn btn-primary btn-lg">Shop Now</a>
+        <a href="#how-it-works" class="btn btn-outline btn-lg">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>We're here to help with any questions</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:var(--space-lg);">
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon"><i data-lucide="message-circle" style="width:28px;height:28px;"></i></div>
+          <h4>Live Chat</h4>
+          <p>Chat with us 24/7 for instant support</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon"><i data-lucide="phone" style="width:28px;height:28px;"></i></div>
+          <h4>Call Us</h4>
+          <p>Speak with our team: 1-800-PHONEVA</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon"><i data-lucide="mail" style="width:28px;height:28px;"></i></div>
+          <h4>Email</h4>
+          <p>support@phonevault.com</p>
+        </div>
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon"><i data-lucide="map-pin" style="width:28px;height:28px;"></i></div>
+          <h4>Visit Us</h4>
+          <p>San Francisco, CA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i data-lucide="smartphone" style="width:24px;height:24px;"></i></div>
+            PhoneVault
+          </div>
+          <p class="footer-description">Your trusted source for premium smartphones. We import phones from global
+            marketplaces, offering new, used, and refurbished devices with warranty. Shop with confidence.</p>
+          <div class="footer-social">
+            <a href="#"><i data-lucide="facebook" style="width:18px;height:18px;"></i></a>
+            <a href="#"><i data-lucide="twitter" style="width:18px;height:18px;"></i></a>
+            <a href="#"><i data-lucide="instagram" style="width:18px;height:18px;"></i></a>
+            <a href="#"><i data-lucide="youtube" style="width:18px;height:18px;"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Shop</h4>
+          <ul class="footer-links">
+            <li><a href="#">New Phones</a></li>
+            <li><a href="#">Refurbished Phones</a></li>
+            <li><a href="#">Used Phones</a></li>
+            <li><a href="#">Imported Phones</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Trade-In</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Brands</h4>
+          <ul class="footer-links">
+            <li><a href="#">Apple</a></li>
+            <li><a href="#">Samsung</a></li>
+            <li><a href="#">Google</a></li>
+            <li><a href="#">OnePlus</a></li>
+            <li><a href="#">Xiaomi</a></li>
+            <li><a href="#">Sony</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PhoneVault. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal-backdrop" id="successModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()"><i data-lucide="x"
+          style="width:18px;height:18px;"></i></button>
+      <div style="text-align:center;">
+        <div
+          style="width:80px;height:80px;background:var(--color-success-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-lg);color:var(--color-success);">
+          <i data-lucide="check" style="width:40px;height:40px;"></i></div>
+        <h3 style="margin-bottom:var(--space-sm);">Added to Cart!</h3>
+        <p class="text-muted" style="margin-bottom:var(--space-lg);">Your phone has been added to the cart successfully.
+        </p>
+        <div style="display:flex;gap:var(--space-md);justify-content:center;">
+          <button class="btn btn-outline" onclick="closeModal()">Continue Shopping</button>
+          <button class="btn btn-primary">View Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Modal functionality
+    function openModal(phoneName) {
+      document.getElementById('successModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('successModal').classList.remove('active');
+    }
+
+    document.getElementById('successModal').addEventListener('click', function (e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.style.background = 'rgba(250, 251, 252, 0.98)';
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+      } else {
+        nav.style.background = 'rgba(250, 251, 252, 0.95)';
+        nav.style.boxShadow = 'none';
+      }
+    });
+
+    // Category tabs
+    document.querySelectorAll('.category-tab').forEach(tab => {
+      tab.addEventListener('click', function () {
+        document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
