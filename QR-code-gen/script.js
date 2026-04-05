@@ -2,7 +2,7 @@ const qrText = document.getElementById('qr-text');
 const sizes = document.getElementById('sizes');
 const generateBtn = document.getElementById('generateBtn');
 const downloadBtn = document.getElementById('downloadBtn');
-const qrContainer = document.querySelector('.qr-body');
+const qrContainer = document.getElementById('qr-body');
 
 let size = sizes.value;
 generateBtn.addEventListener('click',(e)=>{
@@ -16,15 +16,21 @@ sizes.addEventListener('change',(e)=>{
 });
 
 downloadBtn.addEventListener('click', ()=>{
-    let img = document.querySelector('.qr-body img');
+    let img = document.querySelector('#qr-body img');
 
-    if(img !== null){
-        let imgAtrr = img.getAttribute('src');
-        downloadBtn.setAttribute("href", imgAtrr);
+    let downloadLink = document.createElement('a');
+    downloadLink.download = 'qrcode.png';
+
+    if(img !== null && img.getAttribute('src')){
+        downloadLink.href = img.getAttribute('src');
     }
     else{
-        downloadBtn.setAttribute("href", `${document.querySelector('canvas').toDataURL()}`);
+        downloadLink.href = `${document.querySelector('canvas').toDataURL()}`;
     }
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
 });
 
 function isEmptyInput(){
@@ -45,5 +51,6 @@ function generateQRCode(){
         colorLight:"#fff",
         colorDark:"#000",
     });
+    downloadBtn.removeAttribute('disabled');
 }
 
